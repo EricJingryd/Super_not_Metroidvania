@@ -1,0 +1,12 @@
+
+ANTECKNINGAR & INSTRUKTIONER
+
+
+- Cinemachine Virtual Camera
+	-- [Body]
+		--- [Damping] ändrar hastigheten som kameran följer objektet med
+		--- [Dead Zone] ändrar storleken på området som karaktären kan röra sig i utan att kameran börjar följa den
+		--- [Lookahead Time] ändrar hur snabbt kameran rör sig som svar på karaktärens rörelse 
+	-- [Cinemachine Confiner] begränsar kameran så att den stoppar vid kartans ytterkant och inte visar delar av kartan vi inte vill visa
+		--- [Polygon Collider 2D] läggs på kanten av [Background Tilemap]
+		--- Hela [Background]-tilemap:en läggs in i [Bounding Shape 2D] i [Cinemachine Confiner]
