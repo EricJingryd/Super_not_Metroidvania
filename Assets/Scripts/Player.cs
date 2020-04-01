@@ -84,7 +84,7 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        if (!myCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; }    //Return om spelaren inte kolliderar med layern
+        if (!myCollider2D.IsTouchingLayers(LayerMask.GetMask("Jumpable"))) { return; }    //Return om spelaren inte kolliderar med layern
 
         if (CrossPlatformInputManager.GetButtonDown("Jump"))    //CrossPlatformInputManager underlättar för att spela spelet över olika plattformar
         {
