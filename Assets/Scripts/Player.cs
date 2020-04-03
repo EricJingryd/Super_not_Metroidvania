@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
     //States - Tillstånd i spelet
     bool isAlive = true;
     bool playerHasHorizontalSpeed;
+    public bool playerHasJumpBoots { get; set; }
+    bool playerCanDoubleJump = false;
 
     //Cached component references - Lagrad(e) data/referenser
     Rigidbody2D myRigidBody;
@@ -46,6 +48,7 @@ public class Player : MonoBehaviour
         Run();
         ClimbLadder();
         Jump();
+        DoubleJump();
         FlipSprite();
         Fire();
     }
@@ -90,6 +93,22 @@ public class Player : MonoBehaviour
         {
             Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed); //Lägger till hopphastigheten när hoppaknappen trycks ned
             myRigidBody.velocity += jumpVelocityToAdd;
+            playerCanDoubleJump = true;
+        }
+    }
+
+    private void DoubleJump()
+    {
+        if (!myCollider2D.IsTouchingLayers(LayerMask.GetMask("Jumpable")) && playerHasJumpBoots) //Kollar att spelaren är i luften och har jumpboots
+        {
+            if (CrossPlatformInputManager.GetButtonDown("Jump") && playerCanDoubleJump)
+            {
+                Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
+                myRigidBody.velocity = Vector2.zero; //Sätter velocity till noll annars blir hopp avstånde/hastighet olika beroende på när man trycker jump
+                myRigidBody.velocity += jumpVelocityToAdd;
+
+                playerCanDoubleJump = false; //Så att spelaren inte kan hoppa om och om igen
+            }
         }
     }
 
