@@ -6,6 +6,7 @@ public class Patrol_Enemy : MonoBehaviour
 {
     public float speed;
     public float distance;
+    public float hitpoints = 1;
 
     public bool movingRight = true;
 
@@ -28,6 +29,18 @@ public class Patrol_Enemy : MonoBehaviour
             {
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 movingRight = true;
+            }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("PlayerShot"))
+        {
+            hitpoints -= 1;
+            Debug.Log("test");
+            if (hitpoints <= 0)
+            {
+                Destroy(gameObject);
             }
         }
     }

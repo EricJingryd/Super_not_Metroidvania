@@ -19,6 +19,9 @@ public class Player : MonoBehaviour
     [SerializeField] float projectileSpeed = 10f;           //Fält för skotthastighet
     [SerializeField] float projectileFiringPeriod = 0.1f;   //Fält för skottfrekvens
 
+    [Header("Player Hitpoints")]
+    [SerializeField] float hitpoints = 3;
+
     Coroutine firingCoroutine;      //Deklareras för att kunna stoppa enskilda Coroutines istället för alla Coroutines i "Player.cs" - Se "Fire()"
 
     //States - Tillstånd i spelet
@@ -131,6 +134,19 @@ public class Player : MonoBehaviour
             }                           //skottet, men det är spelarens riktning som bestämmer vart det åker.
             playerShot.GetComponent<Rigidbody2D>().velocity = new Vector2(projectileSpeed, 0);
             yield return new WaitForSeconds(projectileFiringPeriod);
+        }
+    }
+
+    private void OnTriggerEnter2D (Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy") || collision.CompareTag("Projectile"))
+        {
+            hitpoints -= 1;
+            Debug.Log("test");
+            if (hitpoints <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
