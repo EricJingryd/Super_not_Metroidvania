@@ -94,6 +94,8 @@ public class Player : MonoBehaviour
             Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed); //Lägger till hopphastigheten när hoppaknappen trycks ned
             myRigidBody.velocity += jumpVelocityToAdd;
             playerCanDoubleJump = true;
+
+            FindObjectOfType<AudioManager>().Play("PlayerJump");
         }
     }
 
@@ -127,6 +129,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            FindObjectOfType<AudioManager>().Play("PlayerShot");
             firingCoroutine = StartCoroutine(FireContinously());
         }
         if (Input.GetButtonUp("Fire1"))
