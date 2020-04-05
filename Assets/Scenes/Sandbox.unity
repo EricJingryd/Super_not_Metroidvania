@@ -214,8 +214,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_ShowDebugText: 0
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
@@ -4198,11 +4198,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_ExcludedPropertiesInInspector:
   - m_Script
-  m_LockStageInInspector:
+  m_LockStageInInspector: 
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_LookAt: {fileID: 0}
@@ -4224,8 +4224,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_ConfineMode: 0
   m_BoundingVolume: {fileID: 0}
   m_BoundingShape2D: {fileID: 0}
@@ -4323,8 +4323,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 575aafe1a7ed5ef459d119afd3248614, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   speed: 3
   stoppingDistance: 5
   retreatDistance: 10
@@ -4333,6 +4333,20 @@ MonoBehaviour:
   projectile: {fileID: 8296425182116176956, guid: f317c90506091084fa75d0606424fd5e,
     type: 3}
   player: {fileID: 360272012}
+--- !u!136 &857519664
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857519660}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.0901113
+  m_Height: 0.32237908
+  m_Direction: 1
+  m_Center: {x: 0.0068029882, y: -0.012472129, z: 0}
 --- !u!1 &1338000768
 GameObject:
   m_ObjectHideFlags: 0
@@ -4360,8 +4374,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b11c8507f14eb44da965b3110423921, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   mixerGroup: {fileID: 0}
   sounds:
   - name: PlayerJump
@@ -4391,7 +4405,7 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
-  - name:
+  - name: 
     clip: {fileID: 0}
     volume: 0
     volumeVariance: 0
@@ -4456,8 +4470,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 10
   m_XDamping: 1
@@ -4495,8 +4509,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1408257101
 GameObject:
   m_ObjectHideFlags: 0
@@ -19614,8 +19628,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba0cef5d8ee0d354c89089f8544b0831, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   playerscript: {fileID: 1552215501}
 --- !u!4 &1853100610
 Transform:
@@ -19629,7 +19643,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1886939012
 GameObject:
@@ -19677,8 +19691,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fa6abba43c674e449c44a4a594b26ed, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   speed: 2
   distance: 2
   hitpoints: 1
@@ -19821,7 +19835,7 @@ PrefabInstance:
     - target: {fileID: -6803316726828061727, guid: 0ac3c234bb5807a41bc938418627d037,
         type: 3}
       propertyPath: groundDetection
-      value:
+      value: 
       objectReference: {fileID: 1886939013}
     - target: {fileID: 4510034749152847346, guid: 0ac3c234bb5807a41bc938418627d037,
         type: 3}
