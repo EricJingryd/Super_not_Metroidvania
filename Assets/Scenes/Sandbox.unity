@@ -174,7 +174,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -198,7 +198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357529832}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.39, y: 0.62, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 768176686}
@@ -4333,20 +4333,22 @@ MonoBehaviour:
   projectile: {fileID: 8296425182116176956, guid: f317c90506091084fa75d0606424fd5e,
     type: 3}
   player: {fileID: 360272012}
---- !u!136 &857519664
-CapsuleCollider:
+--- !u!70 &857519664
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857519660}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.0901113
-  m_Height: 0.32237908
-  m_Direction: 1
-  m_Center: {x: 0.0068029882, y: -0.012472129, z: 0}
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.009581852, y: -0.0102662565}
+  m_Size: {x: 0.1814436, y: 0.32756606}
+  m_Direction: 0
 --- !u!1 &1338000768
 GameObject:
   m_ObjectHideFlags: 0
