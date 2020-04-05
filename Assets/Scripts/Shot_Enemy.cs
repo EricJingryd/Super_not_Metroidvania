@@ -32,6 +32,7 @@ public class Shot_Enemy : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("EnemyOnTriggerPlayer");
             DestroyProjectile();
         }
 
