@@ -8,6 +8,7 @@ public class Skirmish_Enemy : MonoBehaviour
     public float speed;
     public float stoppingDistance;
     public float retreatDistance;
+    public float hitpoints = 1;
 
     private float timeBtwShots;
     public float startTimeBtwShots;
@@ -46,6 +47,19 @@ public class Skirmish_Enemy : MonoBehaviour
         else
         {
             timeBtwShots -= Time.deltaTime;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("PlayerShot"))
+        {
+            hitpoints -= 1;
+            Debug.Log("test");
+            if (hitpoints <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

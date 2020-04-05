@@ -4242,9 +4242,10 @@ GameObject:
   - component: {fileID: 857519662}
   - component: {fileID: 857519661}
   - component: {fileID: 857519663}
+  - component: {fileID: 857519664}
   m_Layer: 0
-  m_Name: octopus
-  m_TagString: Untagged
+  m_Name: Octopus
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4306,7 +4307,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857519660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.49, y: 6.22, z: 0}
+  m_LocalPosition: {x: -7.33, y: 4.16, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4327,10 +4328,27 @@ MonoBehaviour:
   speed: 3
   stoppingDistance: 5
   retreatDistance: 10
+  hitpoints: 1
   startTimeBtwShots: 2
   projectile: {fileID: 8296425182116176956, guid: f317c90506091084fa75d0606424fd5e,
     type: 3}
   player: {fileID: 360272012}
+--- !u!70 &857519664
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857519660}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.008689213, y: -0.011171723}
+  m_Size: {x: 0.17821217, y: 0.33276063}
+  m_Direction: 0
 --- !u!1 &1349384937
 GameObject:
   m_ObjectHideFlags: 3
@@ -19471,6 +19489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   distance: 2
+  hitpoints: 1
   movingRight: 1
   groundDetection: {fileID: 1886939013}
 --- !u!1 &2107883097
@@ -19536,6 +19555,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy Jumper
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510034749152847347, guid: 0ac3c234bb5807a41bc938418627d037,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4510034749152847311, guid: 0ac3c234bb5807a41bc938418627d037,
         type: 3}
@@ -19607,6 +19631,11 @@ PrefabInstance:
       propertyPath: groundDetection
       value: 
       objectReference: {fileID: 1886939013}
+    - target: {fileID: 4510034749152847346, guid: 0ac3c234bb5807a41bc938418627d037,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -6803316726828061727, guid: 0ac3c234bb5807a41bc938418627d037, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0ac3c234bb5807a41bc938418627d037, type: 3}
