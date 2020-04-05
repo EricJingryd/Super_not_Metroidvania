@@ -17,9 +17,9 @@ TagManager:
   - Climbing
   - Player
   - Background
-  - 
-  - 
-  - 
+  - Middleground
+  - Foreground
+  - FX
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
   - name: Background
     uniqueID: 3809797697
     locked: 0
+  - name: Middleground
+    uniqueID: 1587463937
+    locked: 0
   - name: Player
     uniqueID: 3041076165
     locked: 0
@@ -55,4 +58,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1308404677
+    locked: 0
+  - name: FX
+    uniqueID: 1187279325
     locked: 0
