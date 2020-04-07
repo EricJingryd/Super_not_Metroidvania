@@ -20,8 +20,8 @@ TagManager:
   - Middleground
   - Foreground
   - FX
-  - 
-  - 
+  - Enemies
+  - Foreground Backpart
   - 
   - 
   - 
@@ -55,6 +55,9 @@ TagManager:
     locked: 0
   - name: Enemies
     uniqueID: 2652406597
+    locked: 0
+  - name: Foreground Backpart
+    uniqueID: 1051154071
     locked: 0
   - name: Foreground
     uniqueID: 1308404677
