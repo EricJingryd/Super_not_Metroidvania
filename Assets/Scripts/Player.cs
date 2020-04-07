@@ -18,12 +18,19 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject playerShotPrefab;           //Fält för spelarens skott
     [SerializeField] float projectileSpeed = 10f;           //Fält för skotthastighet
     [SerializeField] float projectileFiringPeriod = 0.1f;   //Fält för skottfrekvens
+    [SerializeField] bool Shooting=false;
+
+
+    [Header("Player Hitpoints")]
+    [SerializeField] float hitpoints = 3;
 
     Coroutine firingCoroutine;      //Deklareras för att kunna stoppa enskilda Coroutines istället för alla Coroutines i "Player.cs" - Se "Fire()"
 
     //States - Tillstånd i spelet
     bool isAlive = true;
     bool playerHasHorizontalSpeed;
+    public bool playerHasJumpBoots { get; set; }
+    bool playerCanDoubleJump = false;
 
     //Cached component references - Lagrad(e) data/referenser
     Rigidbody2D myRigidBody;
@@ -46,6 +53,7 @@ public class Player : MonoBehaviour
         Run();
         ClimbLadder();
         Jump();
+        DoubleJump();
         FlipSprite();
         Fire();
     }
@@ -84,12 +92,30 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        if (!myCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; }    //Return om spelaren inte kolliderar med layern
+        if (!myCollider2D.IsTouchingLayers(LayerMask.GetMask("Jumpable"))) { return; }    //Return om spelaren inte kolliderar med layern
 
         if (CrossPlatformInputManager.GetButtonDown("Jump"))    //CrossPlatformInputManager underlättar för att spela spelet över olika plattformar
         {
             Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed); //Lägger till hopphastigheten när hoppaknappen trycks ned
             myRigidBody.velocity += jumpVelocityToAdd;
+            playerCanDoubleJump = true;
+
+            FindObjectOfType<AudioManager>().Play("PlayerJump");
+        }
+    }
+
+    private void DoubleJump()
+    {
+        if (!myCollider2D.IsTouchingLayers(LayerMask.GetMask("Jumpable")) && playerHasJumpBoots) //Kollar att spelaren är i luften och har jumpboots
+        {
+            if (CrossPlatformInputManager.GetButtonDown("Jump") && playerCanDoubleJump)
+            {
+                Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
+                myRigidBody.velocity = Vector2.zero; //Sätter velocity till noll annars blir hopp avstånde/hastighet olika beroende på när man trycker jump
+                myRigidBody.velocity += jumpVelocityToAdd;
+
+                playerCanDoubleJump = false; //Så att spelaren inte kan hoppa om och om igen
+            }
         }
     }
 
@@ -104,15 +130,20 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void Fire() //Mycket kommer utan tvekan att läggas till och ändras häri :)
+    private void Fire() //Mycket kommer utan tvekan att läggas till och ändras häri :) 
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("FireGun") && !Shooting)
         {
+            FindObjectOfType<AudioManager>().Play("PlayerShot");
             firingCoroutine = StartCoroutine(FireContinously());
+            Debug.Log("test1");
+            Shooting = true;
         }
-        if (Input.GetButtonUp("Fire1"))
+        if (Input.GetButtonUp("FireGun"))
         {
             StopCoroutine(firingCoroutine);
+            Shooting = false;
+            Debug.Log("test2");
         }
     }
 
@@ -125,12 +156,25 @@ public class Player : MonoBehaviour
             transform.position,
             Quaternion.identity)
             as GameObject; //Spawnar skottet (vid spelarens position för tillfället) som ett GameObject
-            if (playerHasHorizontalSpeed)
-            {
-                projectileSpeed *= -1;  //Om spelaren står eller rör sig åt vänster skickas skottet åt det hållet med. Skickar alltså bara iväg
-            }                           //skottet, men det är spelarens riktning som bestämmer vart det åker.
-            playerShot.GetComponent<Rigidbody2D>().velocity = new Vector2(projectileSpeed, 0);
+            //if (playerHasHorizontalSpeed)
+            //{
+            //    projectileSpeed *= -1;  //Om spelaren står eller rör sig åt vänster skickas skottet åt det hållet med. Skickar alltså bara iväg
+            //}                           //skottet, men det är spelarens riktning som bestämmer vart det åker.
+            playerShot.GetComponent<Rigidbody2D>().velocity = new Vector2(projectileSpeed * CrossPlatformInputManager.GetAxis("FireGun"), 0);
             yield return new WaitForSeconds(projectileFiringPeriod);
+        }
+    }
+
+    private void OnTriggerEnter2D (Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy") || collision.CompareTag("Projectile"))
+        {
+            hitpoints -= 1;
+            
+            if (hitpoints <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
