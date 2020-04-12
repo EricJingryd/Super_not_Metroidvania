@@ -115,6 +115,8 @@ public class Player : MonoBehaviour
                 myRigidBody.velocity += jumpVelocityToAdd;
 
                 playerCanDoubleJump = false; //Så att spelaren inte kan hoppa om och om igen
+
+                FindObjectOfType<AudioManager>().Play("PlayerJump");
             }
         }
     }
