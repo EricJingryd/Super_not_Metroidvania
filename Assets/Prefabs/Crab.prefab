@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7874224497012673642}
   - component: {fileID: 7874224497012673641}
   - component: {fileID: 7874224497012673647}
-  - component: {fileID: 7874224497012673640}
+  - component: {fileID: 1955540929}
   m_Layer: 16
   m_Name: Crab
   m_TagString: Untagged
@@ -167,7 +167,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.42453194, y: 1.0986996}
   m_EdgeRadius: 0
---- !u!114 &7874224497012673640
+--- !u!114 &1955540929
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,11 +176,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7874224497012673686}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fa6abba43c674e449c44a4a594b26ed, type: 3}
+  m_Script: {fileID: 11500000, guid: a34cda722a1aed24da0ebb2de888d23f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  distance: 0
-  hitpoints: 1
-  movingRight: 1
-  groundDetection: {fileID: 0}
+  moveSpeed: 5
