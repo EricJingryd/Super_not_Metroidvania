@@ -22,7 +22,6 @@ public class Skirmish_Enemy : MonoBehaviour
         timeBtwShots = startTimeBtwShots;
     }
 
-
     void Update()
     {
         if(Vector2.Distance(transform.position,player.position) > stoppingDistance)

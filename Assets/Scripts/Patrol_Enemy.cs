@@ -23,7 +23,6 @@ public class Patrol_Enemy : MonoBehaviour
             {
                 transform.eulerAngles = new Vector3(0, -180, 0);
                 movingRight = false;
-
             }
             else
             {
