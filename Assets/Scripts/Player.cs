@@ -100,7 +100,7 @@ public class Player : MonoBehaviour
             myRigidBody.velocity += jumpVelocityToAdd;
             playerCanDoubleJump = true;
 
-            FindObjectOfType<AudioManager>().Play("PlayerJump");
+            //FindObjectOfType<AudioManager>().Play("PlayerJump");
         }
     }
 
