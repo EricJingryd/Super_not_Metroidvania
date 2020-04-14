@@ -11,41 +11,45 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  -
   - Water
   - UI
-  - 
-  - 
+  -
+  -
   - Ground
   - Climbing
   - Player
   - Background
+  - Middleground
+  - Foreground
   - Jumpable
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - FX
+  - Enemies
+  - Foreground Backpart
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
   m_SortingLayers:
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Background
     uniqueID: 3809797697
+    locked: 0
+  - name: Middleground
+    uniqueID: 1587463937
     locked: 0
   - name: Player
     uniqueID: 3041076165
@@ -56,6 +60,12 @@ TagManager:
   - name: Enemies
     uniqueID: 2652406597
     locked: 0
+  - name: Foreground Backpart
+    uniqueID: 1051154071
+    locked: 0
   - name: Foreground
     uniqueID: 1308404677
+    locked: 0
+  - name: FX
+    uniqueID: 1187279325
     locked: 0
