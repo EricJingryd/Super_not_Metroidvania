@@ -8,6 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Prefabs/Jumper.prefab
   - component: {fileID: 783101825029368150}
   - component: {fileID: 783101825029368149}
   - component: {fileID: 783101825029368151}
@@ -16,6 +17,16 @@ GameObject:
   m_Layer: 16
   m_Name: Jumper
   m_TagString: Untagged
+=======
+  - component: {fileID: 5267689445061340651}
+  - component: {fileID: 7565789734317177250}
+  - component: {fileID: -4345110819957167833}
+  - component: {fileID: -786743620057175854}
+  - component: {fileID: -3091803450284875271}
+  m_Layer: 8
+  m_Name: Player Shot
+  m_TagString: PlayerShot
+>>>>>>> Test-Branch:Assets/Prefabs/Player/Player Shot.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,16 +138,45 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
+<<<<<<< HEAD:Assets/Prefabs/Jumper.prefab
   serializedVersion: 2
   m_Size: {x: 1.4503841, y: 1.4751353}
   m_EdgeRadius: 0
 --- !u!95 &783101825029368145
 Animator:
   serializedVersion: 3
+=======
+  m_Points:
+    m_Paths:
+    - - {x: 0.20790648, y: 0.03969246}
+      - {x: 0.061545372, y: 0.059734225}
+      - {x: 0.041033268, y: 0.20402306}
+      - {x: 0.023645401, y: 0.22736448}
+      - {x: -0.025197506, y: 0.22604686}
+      - {x: -0.04708481, y: 0.18647093}
+      - {x: -0.060958624, y: 0.05561769}
+      - {x: -0.15229416, y: 0.05503881}
+      - {x: -0.23341107, y: 0.02101016}
+      - {x: -0.23472905, y: -0.026207745}
+      - {x: -0.17898536, y: -0.049788415}
+      - {x: -0.06298089, y: -0.06638104}
+      - {x: -0.05922413, y: -0.16411403}
+      - {x: -0.018828869, y: -0.2313177}
+      - {x: 0.025431871, y: -0.22797966}
+      - {x: 0.048935413, y: -0.17544046}
+      - {x: 0.0666039, y: -0.06509328}
+      - {x: 0.18158078, y: -0.05139023}
+      - {x: 0.22682285, y: -0.034729123}
+      - {x: 0.23328805, y: -0.007432401}
+      - {x: 0.2294581, y: 0.025505126}
+--- !u!82 &-3091803450284875271
+AudioSource:
+>>>>>>> Test-Branch:Assets/Prefabs/Player/Player Shot.prefab
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Prefabs/Jumper.prefab
   m_GameObject: {fileID: 783101825029368148}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
@@ -149,3 +189,95 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+=======
+  m_GameObject: {fileID: 6523390865101178100}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+>>>>>>> Test-Branch:Assets/Prefabs/Player/Player Shot.prefab
