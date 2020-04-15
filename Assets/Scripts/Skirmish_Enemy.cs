@@ -58,6 +58,7 @@ public class Skirmish_Enemy : MonoBehaviour
             Debug.Log("test");
             if (hitpoints <= 0)
             {
+                FindObjectOfType<AudioManager>().Play("OctopusDeathSound");
                 Destroy(gameObject);
             }
         }

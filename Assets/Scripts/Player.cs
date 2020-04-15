@@ -175,6 +175,7 @@ public class Player : MonoBehaviour
             
             if (hitpoints <= 0)
             {
+                FindObjectOfType<AudioManager>().Play("PlayerDeathSound");
                 Destroy(gameObject);
             }
         }

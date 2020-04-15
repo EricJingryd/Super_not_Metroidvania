@@ -6,7 +6,7 @@ public class Patrol_Enemy : MonoBehaviour
 {
     public float speed;
     public float distance;
-    public float hitpoints = 1;
+    public float hitpoints = 2;
 
     public bool movingRight = true;
 
@@ -40,6 +40,7 @@ public class Patrol_Enemy : MonoBehaviour
             Debug.Log("test");
             if (hitpoints <= 0)
             {
+                FindObjectOfType<AudioManager>().Play("EnemyJumperDeathSound");
                 Destroy(gameObject);
             }
         }

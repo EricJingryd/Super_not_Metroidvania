@@ -2,29 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GetJumpBoots : MonoBehaviour
+public class Player_Shot : MonoBehaviour
 {
-
-    Player player;
-    public GameObject playerscript;
-
     // Start is called before the first frame update
     void Start()
     {
-        player = playerscript.GetComponent<Player>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        FindObjectOfType<AudioManager>().Play("TouchUpgradeSound");
-        player.playerHasJumpBoots = true;
-        
-        Destroy(gameObject);
+        if (collision.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
