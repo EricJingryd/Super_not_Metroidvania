@@ -174,7 +174,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -198,7 +198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357529832}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.39, y: 0.62, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 768176686}
@@ -4243,6 +4243,7 @@ GameObject:
   - component: {fileID: 857519661}
   - component: {fileID: 857519663}
   - component: {fileID: 857519664}
+  - component: {fileID: 857519665}
   m_Layer: 0
   m_Name: Octopus
   m_TagString: Enemy
@@ -4349,6 +4350,25 @@ CapsuleCollider2D:
   m_Offset: {x: 0.009581852, y: -0.0102662565}
   m_Size: {x: 0.1814436, y: 0.32756606}
   m_Direction: 0
+--- !u!95 &857519665
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857519660}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 13636867bd5fb814c841588e52e0c6f7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1338000768
 GameObject:
   m_ObjectHideFlags: 0
@@ -4407,11 +4427,29 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: 36fc294e54e9440479e33531e5a308ac, type: 3}
+    volume: 0.2
     volumeVariance: 0
-    pitch: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: JumperDeath
+    clip: {fileID: 8300000, guid: cc4e84f3cb8e591418978200082e46bc, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Upgrade
+    clip: {fileID: 8300000, guid: 9b8de378ec8e7b6408e9d8bd3f285629, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
     pitchVariance: 0
     loop: 0
     mixerGroup: {fileID: 0}
@@ -19700,6 +19738,25 @@ MonoBehaviour:
   hitpoints: 1
   movingRight: 1
   groundDetection: {fileID: 1886939013}
+--- !u!95 &2094303536
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094303531}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7ba269e06415c9740b830c5c46a841ec, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2107883097
 GameObject:
   m_ObjectHideFlags: 0
