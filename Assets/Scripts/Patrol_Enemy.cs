@@ -41,6 +41,7 @@ public class Patrol_Enemy : MonoBehaviour
             if (hitpoints <= 0)
             {
                 Destroy(gameObject);
+                FindObjectOfType<AudioManager>().Play("JumperDeath");
             }
         }
     }

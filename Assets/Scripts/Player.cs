@@ -115,6 +115,7 @@ public class Player : MonoBehaviour
                 myRigidBody.velocity += jumpVelocityToAdd;
 
                 playerCanDoubleJump = false; //Så att spelaren inte kan hoppa om och om igen
+                FindObjectOfType<AudioManager>().Play("PlayerJump");
             }
         }
     }
@@ -173,6 +174,7 @@ public class Player : MonoBehaviour
             
             if (hitpoints <= 0)
             {
+                FindObjectOfType<AudioManager>().Play("PlayerDeath");
                 Destroy(gameObject);
             }
         }

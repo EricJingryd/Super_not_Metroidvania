@@ -24,5 +24,6 @@ public class GetJumpBoots : MonoBehaviour
     {
         player.playerHasJumpBoots = true;
         Destroy(gameObject);
+        FindObjectOfType<AudioManager>().Play("Upgrade");
     }
 }

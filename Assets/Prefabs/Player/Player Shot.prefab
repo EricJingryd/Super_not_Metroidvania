@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7565789734317177250}
   - component: {fileID: -4345110819957167833}
   - component: {fileID: -786743620057175854}
+  - component: {fileID: 7879790341466603971}
   m_Layer: 8
   m_Name: Player Shot
   m_TagString: PlayerShot
@@ -149,3 +150,15 @@ PolygonCollider2D:
       - {x: 0.22682285, y: -0.034729123}
       - {x: 0.23328805, y: -0.007432401}
       - {x: 0.2294581, y: 0.025505126}
+--- !u!114 &7879790341466603971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6523390865101178100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4160a220d06963f47a496409a06ea10c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
