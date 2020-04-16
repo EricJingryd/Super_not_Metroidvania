@@ -11,4 +11,9 @@ public class Player_Shot : MonoBehaviour
             Destroy(gameObject);
         }                     
     }
+
+    private void Update()
+    {
+        Destroy(gameObject, 1);
+    }
 }
