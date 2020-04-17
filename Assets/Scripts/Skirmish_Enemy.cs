@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Skirmish_Enemy : MonoBehaviour
 {
+    public HealthBar healthBar;
 
     public float speed;
     public float stoppingDistance;
     public float retreatDistance;
-    public float hitpoints = 1;
+    public int hitpoints;
+    public int maxHitpoints = 1;
 
     private float timeBtwShots;
     public float startTimeBtwShots;
@@ -20,6 +22,8 @@ public class Skirmish_Enemy : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         timeBtwShots = startTimeBtwShots;
+        hitpoints = maxHitpoints;
+        healthBar.SetMaxHealth(maxHitpoints);
     }
 
 
@@ -55,7 +59,7 @@ public class Skirmish_Enemy : MonoBehaviour
         if (collision.CompareTag("PlayerShot"))
         {
             hitpoints -= 1;
-            Debug.Log("test");
+            healthBar.SetHealth(hitpoints);
             if (hitpoints <= 0)
             {
                 Destroy(gameObject);

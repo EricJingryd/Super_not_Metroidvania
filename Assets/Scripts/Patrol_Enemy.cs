@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class Patrol_Enemy : MonoBehaviour
 {
+    public HealthBar healthBar;
+
     public float speed;
     public float distance;
-    public float hitpoints = 1;
+    public int hitpoints;
+    public int maxHitpoints;
 
     public bool movingRight = true;
 
     public Transform groundDetection;
+    private void Start()
+    {
+        hitpoints = maxHitpoints;
+        healthBar.SetMaxHealth(maxHitpoints);
+    }
 
     private void Update()
     {
@@ -37,7 +45,7 @@ public class Patrol_Enemy : MonoBehaviour
         if (collision.CompareTag("PlayerShot"))
         {
             hitpoints -= 1;
-            Debug.Log("test");
+            healthBar.SetHealth(hitpoints);
             if (hitpoints <= 0)
             {
                 Destroy(gameObject);

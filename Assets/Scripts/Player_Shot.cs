@@ -8,7 +8,7 @@ public class Player_Shot : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            Destroy(gameObject);
+                Destroy(gameObject);           
         }                     
     }
 

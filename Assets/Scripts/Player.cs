@@ -6,6 +6,8 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour
 {
+    public HealthBar healthBar;
+
     //Config
     [Header("Configuration Parameters")]        //Rubrik för allmänna konfigurationsparametrar
 
@@ -22,7 +24,8 @@ public class Player : MonoBehaviour
 
 
     [Header("Player Hitpoints")]
-    [SerializeField] float hitpoints = 3;
+    [SerializeField] int hitpoints;
+    [SerializeField] int maxHitpoints = 3;
 
     Coroutine firingCoroutine;      //Deklareras för att kunna stoppa enskilda Coroutines istället för alla Coroutines i "Player.cs" - Se "Fire()"
 
@@ -46,6 +49,8 @@ public class Player : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         myCollider2D = GetComponent<Collider2D>();
         gravityScaleAtStart = myRigidBody.gravityScale;
+        hitpoints = maxHitpoints;
+        healthBar.SetMaxHealth(maxHitpoints);
     }
 
     void Update()
@@ -171,6 +176,7 @@ public class Player : MonoBehaviour
         if (collision.CompareTag("Enemy") || collision.CompareTag("Projectile"))
         {
             hitpoints -= 1;
+            healthBar.SetHealth(hitpoints);
             
             if (hitpoints <= 0)
             {
