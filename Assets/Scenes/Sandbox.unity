@@ -165,6 +165,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 25336986}
     m_Modifications:
+    - target: {fileID: 8819034169736724394, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
+        type: 3}
+      propertyPath: m_Name
+      value: DestructBlock (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 8819034169736724393, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -219,11 +224,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8819034169736724394, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
-        type: 3}
-      propertyPath: m_Name
-      value: DestructBlock (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd8cdefbb1192814cb7e9cd1198d7a77, type: 3}
@@ -361,6 +361,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 25336986}
     m_Modifications:
+    - target: {fileID: 8819034169736724394, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
+        type: 3}
+      propertyPath: m_Name
+      value: DestructBlock (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 8819034169736724393, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -415,11 +420,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8819034169736724394, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
-        type: 3}
-      propertyPath: m_Name
-      value: DestructBlock (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd8cdefbb1192814cb7e9cd1198d7a77, type: 3}
@@ -558,6 +558,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 25336986}
     m_Modifications:
+    - target: {fileID: 8819034169736724394, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
+        type: 3}
+      propertyPath: m_Name
+      value: DestructBlock (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 8819034169736724393, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -612,11 +617,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8819034169736724394, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
-        type: 3}
-      propertyPath: m_Name
-      value: DestructBlock (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd8cdefbb1192814cb7e9cd1198d7a77, type: 3}
@@ -5120,6 +5120,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 25336986}
     m_Modifications:
+    - target: {fileID: 8819034169736724394, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
+        type: 3}
+      propertyPath: m_Name
+      value: DestructBlock (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 8819034169736724393, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5174,11 +5179,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8819034169736724394, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
-        type: 3}
-      propertyPath: m_Name
-      value: DestructBlock (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd8cdefbb1192814cb7e9cd1198d7a77, type: 3}
@@ -5948,6 +5948,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 25336986}
     m_Modifications:
+    - target: {fileID: 8819034169736724394, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
+        type: 3}
+      propertyPath: m_Name
+      value: DestructBlock (7)
+      objectReference: {fileID: 0}
     - target: {fileID: 8819034169736724393, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6002,11 +6007,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8819034169736724394, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
-        type: 3}
-      propertyPath: m_Name
-      value: DestructBlock (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd8cdefbb1192814cb7e9cd1198d7a77, type: 3}
@@ -20785,6 +20785,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 25336986}
     m_Modifications:
+    - target: {fileID: 8819034169736724394, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
+        type: 3}
+      propertyPath: m_Name
+      value: DestructBlock
+      objectReference: {fileID: 0}
     - target: {fileID: 8819034169736724393, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20839,11 +20844,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8819034169736724394, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
-        type: 3}
-      propertyPath: m_Name
-      value: DestructBlock
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd8cdefbb1192814cb7e9cd1198d7a77, type: 3}
@@ -21754,6 +21754,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 25336986}
     m_Modifications:
+    - target: {fileID: 8819034169736724394, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
+        type: 3}
+      propertyPath: m_Name
+      value: DestructBlock (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 8819034169736724393, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21808,11 +21813,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8819034169736724394, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
-        type: 3}
-      propertyPath: m_Name
-      value: DestructBlock (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd8cdefbb1192814cb7e9cd1198d7a77, type: 3}
@@ -21869,6 +21869,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 25336986}
     m_Modifications:
+    - target: {fileID: 8819034169736724394, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
+        type: 3}
+      propertyPath: m_Name
+      value: DestructBlock (6)
+      objectReference: {fileID: 0}
     - target: {fileID: 8819034169736724393, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21923,11 +21928,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8819034169736724394, guid: fd8cdefbb1192814cb7e9cd1198d7a77,
-        type: 3}
-      propertyPath: m_Name
-      value: DestructBlock (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd8cdefbb1192814cb7e9cd1198d7a77, type: 3}
@@ -22345,5 +22345,9 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1028280402}
+    - target: {fileID: 1552215502, guid: 50a86a77f8fe42c41871a20b18b21937, type: 3}
+      propertyPath: distance
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50a86a77f8fe42c41871a20b18b21937, type: 3}
