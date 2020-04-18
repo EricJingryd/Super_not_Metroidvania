@@ -22056,7 +22056,7 @@ PrefabInstance:
     - target: {fileID: 1222382965612970530, guid: 8b219fa6ecf48fc448db6d7ca624bb06,
         type: 3}
       propertyPath: maxHitpoints
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1222382965612970530, guid: 8b219fa6ecf48fc448db6d7ca624bb06,
         type: 3}
@@ -22297,7 +22297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2094303532, guid: 0ac3c234bb5807a41bc938418627d037, type: 3}
       propertyPath: maxHitpoints
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2094303532, guid: 0ac3c234bb5807a41bc938418627d037, type: 3}
       propertyPath: healthBar
