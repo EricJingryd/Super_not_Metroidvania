@@ -174,7 +174,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -198,7 +198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357529832}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.39, y: 0.62, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 768176686}
@@ -4329,8 +4329,10 @@ MonoBehaviour:
   speed: 3
   stoppingDistance: 5
   retreatDistance: 10
-  hitpoints: 1
+  hitpoints: 5
   startTimeBtwShots: 2
+  EnemyDeathEffect: {fileID: 5757581662434621914, guid: 1655aead05119c54f92140b5e7490c11,
+    type: 3}
   projectile: {fileID: 8296425182116176956, guid: f317c90506091084fa75d0606424fd5e,
     type: 3}
   player: {fileID: 360272012}
@@ -4347,8 +4349,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.009581852, y: -0.0102662565}
-  m_Size: {x: 0.1814436, y: 0.32756606}
+  m_Offset: {x: -0.001200819, y: 0.00010166168}
+  m_Size: {x: 0.12504207, y: 0.26535854}
   m_Direction: 0
 --- !u!95 &857519665
 Animator:
@@ -4447,6 +4449,24 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Upgrade
     clip: {fileID: 8300000, guid: 9b8de378ec8e7b6408e9d8bd3f285629, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: PlayerOnTriggerEnemy
+    clip: {fileID: 8300000, guid: 18f7366846a36d04b9db6795cdb1a364, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: EnemyExplosionSound
+    clip: {fileID: 8300000, guid: dbb1d47a8082d404aa4b190238235eab, type: 3}
     volume: 0.2
     volumeVariance: 0
     pitch: 1
@@ -19735,9 +19755,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   distance: 2
-  hitpoints: 1
+  hitpoints: 10
   movingRight: 1
   groundDetection: {fileID: 1886939013}
+  EnemyDeathEffect: {fileID: 5757581662434621914, guid: 1655aead05119c54f92140b5e7490c11,
+    type: 3}
 --- !u!95 &2094303536
 Animator:
   serializedVersion: 3

@@ -11,6 +11,7 @@ public class Patrol_Enemy : MonoBehaviour
     public bool movingRight = true;
 
     public Transform groundDetection;
+    public GameObject EnemyDeathEffect;
 
     private void Update()
     {
@@ -41,7 +42,9 @@ public class Patrol_Enemy : MonoBehaviour
             if (hitpoints <= 0)
             {
                 Destroy(gameObject);
+                Instantiate(EnemyDeathEffect, transform.position, transform.rotation);
                 FindObjectOfType<AudioManager>().Play("JumperDeath");
+                FindObjectOfType<AudioManager>().Play("EnemyExplosionSound");
             }
         }
     }

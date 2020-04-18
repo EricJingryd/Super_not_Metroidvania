@@ -13,6 +13,7 @@ public class Skirmish_Enemy : MonoBehaviour
     private float timeBtwShots;
     public float startTimeBtwShots;
 
+    public GameObject EnemyDeathEffect;
     public GameObject projectile;
     public Transform player;
  
@@ -59,7 +60,9 @@ public class Skirmish_Enemy : MonoBehaviour
             if (hitpoints <= 0)
             {
                 Destroy(gameObject);
+                Instantiate(EnemyDeathEffect, transform.position, transform.rotation);
                 FindObjectOfType<AudioManager>().Play("JumperDeath");
+                FindObjectOfType<AudioManager>().Play("EnemyExplosionSound");
             }
         }
     }

@@ -21,7 +21,7 @@ TagManager:
   - Player
   - Background
   - Jumpable
-  - 
+  - HitEffect
   - 
   - 
   - 
@@ -58,4 +58,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1308404677
+    locked: 0
+  - name: HitEfftect
+    uniqueID: 1135166803
     locked: 0
