@@ -36,6 +36,8 @@ public class Grabber : MonoBehaviour
             {
                 grabbed = false;
 
+                hit.collider.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+
                 if (hit.collider.gameObject.GetComponent<Rigidbody2D>() != null) //Throws object
                 {
                     hit.collider.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(transform.localScale.x, 1) * throwforce;
@@ -46,6 +48,7 @@ public class Grabber : MonoBehaviour
         if (grabbed) //Keeps the object at a point that is always above player
         {
             hit.collider.gameObject.transform.position = Holdpoint.position;
+            hit.collider.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         }
     }
 
