@@ -7,6 +7,7 @@ using UnityStandardAssets.CrossPlatformInput;
 public class Player : MonoBehaviour
 {
     public HealthBar healthBar;
+    //static Player playerInstance;
 
     //Config
     [Header("Configuration Parameters")]        //Rubrik för allmänna konfigurationsparametrar
@@ -51,6 +52,14 @@ public class Player : MonoBehaviour
         gravityScaleAtStart = myRigidBody.gravityScale;
         hitpoints = maxHitpoints;
         healthBar.SetMaxHealth(maxHitpoints);
+
+        //if(playerInstance != null)
+        //{
+        //    Destroy(gameObject);
+        //    return;
+        //}
+        //playerInstance = this;
+        //DontDestroyOnLoad(gameObject);
     }
 
     void Update()

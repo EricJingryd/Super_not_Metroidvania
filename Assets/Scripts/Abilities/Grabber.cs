@@ -36,6 +36,8 @@ public class Grabber : MonoBehaviour
             {
                 grabbed = false;
 
+                hit.collider.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                hit.collider.gameObject.GetComponent<CircleCollider2D>().enabled = true;
                 hit.collider.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
 
                 if (hit.collider.gameObject.GetComponent<Rigidbody2D>() != null) //Throws object
@@ -49,6 +51,8 @@ public class Grabber : MonoBehaviour
         {
             hit.collider.gameObject.transform.position = Holdpoint.position;
             hit.collider.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            hit.collider.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            hit.collider.gameObject.GetComponent<CircleCollider2D>().enabled = false;
         }
     }
 
