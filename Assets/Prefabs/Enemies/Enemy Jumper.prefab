@@ -354,12 +354,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa6abba43c674e449c44a4a594b26ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 9021869622470068535}
   speed: 2
   distance: 2
   hitpoints: 1
   maxHitpoints: 0
   movingRight: 1
+  EnemyDeathEffect: {fileID: 5757581662434621914, guid: 1655aead05119c54f92140b5e7490c11,
+    type: 3}
   groundDetection: {fileID: 1886939013}
 --- !u!1001 &5551815543437459423
 PrefabInstance:
@@ -496,3 +498,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 5551815543437459423}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9021869622470068535 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3474558230697588456, guid: 5e90e0d17117e514ab6b147a244c11c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 5551815543437459423}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06dd253599918e4439f6326f544dbcf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

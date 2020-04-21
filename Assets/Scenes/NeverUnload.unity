@@ -687,7 +687,6 @@ GameObject:
   m_Component:
   - component: {fileID: 786625219}
   - component: {fileID: 786625218}
-  - component: {fileID: 786625220}
   m_Layer: 0
   m_Name: AnyManager
   m_TagString: Untagged
@@ -721,20 +720,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &786625220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786625217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b11c8507f14eb44da965b3110423921, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mixerGroup: {fileID: 0}
-  sounds: []
 --- !u!1 &795132923
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,27 +1231,42 @@ PrefabInstance:
     - target: {fileID: 5782796438000227180, guid: ebaef05629fdbcc4ba35e795574967c1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.34
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5782796438000227180, guid: ebaef05629fdbcc4ba35e795574967c1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.44
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5782796438000227180, guid: ebaef05629fdbcc4ba35e795574967c1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5782796438000227181, guid: ebaef05629fdbcc4ba35e795574967c1,
         type: 3}
       propertyPath: orthographic size
-      value: 7
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782796438000227181, guid: ebaef05629fdbcc4ba35e795574967c1,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.047169805
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782796438000227181, guid: ebaef05629fdbcc4ba35e795574967c1,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.043832317
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782796438000227181, guid: ebaef05629fdbcc4ba35e795574967c1,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.043832317
       objectReference: {fileID: 0}
     - target: {fileID: 5782796438476698083, guid: ebaef05629fdbcc4ba35e795574967c1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.34
+      value: -0.08
       objectReference: {fileID: 0}
     - target: {fileID: 5782796438476698083, guid: ebaef05629fdbcc4ba35e795574967c1,
         type: 3}
@@ -1639,7 +1639,7 @@ PrefabInstance:
     - target: {fileID: 9121247024406888909, guid: 50a86a77f8fe42c41871a20b18b21937,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.34
+      value: -0.08
       objectReference: {fileID: 0}
     - target: {fileID: 9121247024406888909, guid: 50a86a77f8fe42c41871a20b18b21937,
         type: 3}
@@ -1701,6 +1701,11 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -5612751346530980956, guid: 50a86a77f8fe42c41871a20b18b21937,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 67d16dddc3bae9046a583e4c83beba23, type: 2}
     - target: {fileID: 1028753912, guid: 50a86a77f8fe42c41871a20b18b21937, type: 3}
       propertyPath: healthBar
       value: 
@@ -1995,6 +2000,193 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1001 &1977964313
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2500077028895601099, guid: 12aa41c23e9ee4a498695c8a7737d378,
+        type: 3}
+      propertyPath: m_Name
+      value: DoubleJump
+      objectReference: {fileID: 0}
+    - target: {fileID: 2500077028895601079, guid: 12aa41c23e9ee4a498695c8a7737d378,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -29.709684
+      objectReference: {fileID: 0}
+    - target: {fileID: 2500077028895601079, guid: 12aa41c23e9ee4a498695c8a7737d378,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.0999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2500077028895601079, guid: 12aa41c23e9ee4a498695c8a7737d378,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2500077028895601079, guid: 12aa41c23e9ee4a498695c8a7737d378,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2500077028895601079, guid: 12aa41c23e9ee4a498695c8a7737d378,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2500077028895601079, guid: 12aa41c23e9ee4a498695c8a7737d378,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2500077028895601079, guid: 12aa41c23e9ee4a498695c8a7737d378,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2500077028895601079, guid: 12aa41c23e9ee4a498695c8a7737d378,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2500077028895601079, guid: 12aa41c23e9ee4a498695c8a7737d378,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2500077028895601079, guid: 12aa41c23e9ee4a498695c8a7737d378,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2500077028895601079, guid: 12aa41c23e9ee4a498695c8a7737d378,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2500077028895601076, guid: 12aa41c23e9ee4a498695c8a7737d378, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 12aa41c23e9ee4a498695c8a7737d378, type: 3}
+--- !u!1 &2016833284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2016833286}
+  - component: {fileID: 2016833285}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2016833285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016833284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b11c8507f14eb44da965b3110423921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 0}
+  sounds:
+  - name: PlayerJump
+    clip: {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: PlayerShot
+    clip: {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
+    volume: 0.025
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: EnemyOnTriggerPlayer
+    clip: {fileID: 8300000, guid: 7bef0064f8567430cac22499c6b93d4f, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: 36fc294e54e9440479e33531e5a308ac, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: JumperDeath
+    clip: {fileID: 8300000, guid: cc4e84f3cb8e591418978200082e46bc, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Upgrade
+    clip: {fileID: 8300000, guid: 9b8de378ec8e7b6408e9d8bd3f285629, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: PlayerOnTriggerEnemy
+    clip: {fileID: 8300000, guid: 18f7366846a36d04b9db6795cdb1a364, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: EnemyExplosionSound
+    clip: {fileID: 8300000, guid: dbb1d47a8082d404aa4b190238235eab, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+--- !u!4 &2016833286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016833284}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2069691113
 GameObject:
   m_ObjectHideFlags: 0
