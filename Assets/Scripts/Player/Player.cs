@@ -7,7 +7,6 @@ using UnityStandardAssets.CrossPlatformInput;
 public class Player : MonoBehaviour
 {
     public HealthBar healthBar;
-    //static Player playerInstance;
 
     //Config
     [Header("Configuration Parameters")]        //Rubrik för allmänna konfigurationsparametrar
@@ -34,6 +33,7 @@ public class Player : MonoBehaviour
     bool isAlive = true;
     bool playerHasHorizontalSpeed;
     public bool playerHasJumpBoots { get; set; }
+    public bool playerHasSpeedBuff { get; set; }
     bool playerCanDoubleJump = false;
 
     //Cached component references - Lagrad(e) data/referenser
@@ -52,14 +52,6 @@ public class Player : MonoBehaviour
         gravityScaleAtStart = myRigidBody.gravityScale;
         hitpoints = maxHitpoints;
         healthBar.SetMaxHealth(maxHitpoints);
-
-        //if(playerInstance != null)
-        //{
-        //    Destroy(gameObject);
-        //    return;
-        //}
-        //playerInstance = this;
-        //DontDestroyOnLoad(gameObject);
     }
 
     void Update()
@@ -83,6 +75,7 @@ public class Player : MonoBehaviour
                                                                                             //detta inte skrivs i if-satsen nedan beror på bättre readability.
         myAnimator.SetBool("Running", playerHasHorizontalSpeed);    //Ändrar state till Running om spelaren springer, löpanimation startar
     }
+
 
     private void ClimbLadder()
     {
