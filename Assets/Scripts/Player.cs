@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     //Config
     [Header("Configuration Parameters")]        //Rubrik för allmänna konfigurationsparametrar
 
+    [SerializeField] LayerMask ground;
+
     [Header("Speed Parameters")]                //Rubrik för hastighetskonfiguration (i Unity:s interface)
     [SerializeField] float runSpeed = 5f;       //Fält för löphastighet, gångras med "controlThrow" i Run() nedan
     [SerializeField] float jumpSpeed = 5f;      //Fält för hopphastighet
@@ -27,6 +29,31 @@ public class Player : MonoBehaviour
     [SerializeField] int hitpoints;
     [SerializeField] int maxHitpoints = 3;
 
+
+    float fJumpPressedRemember = 0;
+    float fGroundedRemember = 0;
+    [Header("Jumping Smoothness")]
+    [SerializeField]
+    float fJumpPressedRememberTime = 0.2f;
+    [SerializeField]
+    float fGroundedRememberTime = 0.25f;
+    [SerializeField]
+    [Range(0, 1)]
+    float fCutJumpHeight = 0.5f;
+
+    [Header("Run Damping and acceleration")]
+
+    [SerializeField]
+    float fHorizontalAcceleration = 1;
+    [SerializeField]
+    [Range(0, 1)]
+    float fHorizontalDampingBasic = 0.5f;
+    [SerializeField]
+    [Range(0, 1)]
+    float fHorizontalDampingWhenStopping = 0.5f;
+    [SerializeField]
+    [Range(0, 1)]
+    float fHorizontalDampingWhenTurning = 0.5f;
     Coroutine firingCoroutine;      //Deklareras för att kunna stoppa enskilda Coroutines istället för alla Coroutines i "Player.cs" - Se "Fire()"
 
     //States - Tillstånd i spelet
@@ -65,13 +92,18 @@ public class Player : MonoBehaviour
 
     private void Run()
     {
-        float controlThrow = CrossPlatformInputManager.GetAxis("Horizontal");   //-1 till +1, horisontell rörelse mha. Unity rörelsefunktion
-        Vector2 playerVelocity = new Vector2(controlThrow * runSpeed, myRigidBody.velocity.y); //y-vektorns hastighet anges med myRigiBody för att låta den göra det den gör
-        myRigidBody.velocity = playerVelocity;
+        float fHorizontalVelocity = myRigidBody.velocity.x;
+        fHorizontalVelocity += Input.GetAxisRaw("Horizontal");
 
-        bool playerHasHorizontalSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon;  //Detta är en if-sats som kollar om det absoluta värdet på horisontell
-                                                                                            //rörelse är större än 0 (Epsilon). Är den det så returneras True. Att 
-                                                                                            //detta inte skrivs i if-satsen nedan beror på bättre readability.
+        if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) < 0.01f)
+            fHorizontalVelocity *= Mathf.Pow(1f - fHorizontalDampingWhenStopping, Time.deltaTime * 10f);
+        else if (Mathf.Sign(Input.GetAxisRaw("Horizontal")) != Mathf.Sign(fHorizontalVelocity))
+            fHorizontalVelocity *= Mathf.Pow(1f - fHorizontalDampingWhenTurning, Time.deltaTime * 10f);
+        else
+            fHorizontalVelocity *= Mathf.Pow(1f - fHorizontalDampingBasic, Time.deltaTime * 10f);
+
+        myRigidBody.velocity = new Vector2(fHorizontalVelocity, myRigidBody.velocity.y);
+                                                                              //detta inte skrivs i if-satsen nedan beror på bättre readability.
         myAnimator.SetBool("Running", playerHasHorizontalSpeed);    //Ändrar state till Running om spelaren springer, löpanimation startar
     }
 
@@ -97,16 +129,53 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        if (!myCollider2D.IsTouchingLayers(LayerMask.GetMask("Jumpable"))) { return; }    //Return om spelaren inte kolliderar med layern
+        Vector2 v2GroundedBoxCheckPosition = (Vector2)transform.position + new Vector2(0, -0.01f);
+        Vector2 v2GroundedBoxCheckScale = (Vector2)transform.localScale + new Vector2(-0.01f, 0);
+        bool bGrounded = Physics2D.OverlapBox(v2GroundedBoxCheckPosition, v2GroundedBoxCheckScale, 0, ground);
 
-        if (CrossPlatformInputManager.GetButtonDown("Jump"))    //CrossPlatformInputManager underlättar för att spela spelet över olika plattformar
+        fGroundedRemember -= Time.deltaTime;
+        if (bGrounded && !(myRigidBody.velocity.y > 0))
         {
-            Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed); //Lägger till hopphastigheten när hoppaknappen trycks ned
-            myRigidBody.velocity += jumpVelocityToAdd;
+            fGroundedRemember = fGroundedRememberTime;
+        }
+
+        fJumpPressedRemember -= Time.deltaTime;
+        if (Input.GetButtonDown("Jump"))
+        {
+            fJumpPressedRemember = fJumpPressedRememberTime;
+        }
+
+        if (Input.GetButtonUp("Jump")) //Gör så att hoppet blir kortare när man släppen hopp knappen för att ge olika höjd på hoppen baserat på när man släpper hopp knappen
+        {
+            if (myRigidBody.velocity.y > 0)
+            {
+                myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, myRigidBody.velocity.y * fCutJumpHeight);
+            }
+        }
+
+        if ((fJumpPressedRemember > 0) && (fGroundedRemember > 0))
+        {
+            Debug.Log(fGroundedRemember);
+            fJumpPressedRemember = 0;
+            fGroundedRemember = 0;
+            myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpSpeed);
+            FindObjectOfType<AudioManager>().Play("PlayerJump");
             playerCanDoubleJump = true;
 
-            FindObjectOfType<AudioManager>().Play("PlayerJump");
         }
+
+
+
+        //if (!myCollider2D.IsTouchingLayers(LayerMask.GetMask("Jumpable"))) { return; }    //Return om spelaren inte kolliderar med layern
+
+        //if (CrossPlatformInputManager.GetButtonDown("Jump"))    //CrossPlatformInputManager underlättar för att spela spelet över olika plattformar
+        //{
+        //    Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed); //Lägger till hopphastigheten när hoppaknappen trycks ned
+        //    myRigidBody.velocity += jumpVelocityToAdd;
+        //    
+
+        //    
+        //}
     }
 
     private void DoubleJump()
@@ -115,11 +184,18 @@ public class Player : MonoBehaviour
         {
             if (CrossPlatformInputManager.GetButtonDown("Jump") && playerCanDoubleJump)
             {
-                Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
+                Vector2 jumpVelocityToAdd = new Vector2(myRigidBody.velocity.x, jumpSpeed);
                 myRigidBody.velocity = Vector2.zero; //Sätter velocity till noll annars blir hopp avstånde/hastighet olika beroende på när man trycker jump
                 myRigidBody.velocity += jumpVelocityToAdd;
 
                 playerCanDoubleJump = false; //Så att spelaren inte kan hoppa om och om igen
+                if (Input.GetButtonUp("Jump")) //Gör så att hoppet blir kortare när man släppen hopp knappen för att ge olika höjd på hoppen baserat på när man släpper hopp knappen
+                {
+                    if (myRigidBody.velocity.y > 0)
+                    {
+                        myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, myRigidBody.velocity.y * fCutJumpHeight);
+                    }
+                }
                 FindObjectOfType<AudioManager>().Play("PlayerJump");
             }
         }
@@ -142,14 +218,12 @@ public class Player : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Play("PlayerShot");
             firingCoroutine = StartCoroutine(FireContinously());
-            Debug.Log("test1");
             Shooting = true;
         }
         if (Input.GetButtonUp("FireGun"))
         {
             StopCoroutine(firingCoroutine);
             Shooting = false;
-            Debug.Log("test2");
         }
     }
 
