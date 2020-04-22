@@ -22421,6 +22421,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1028280402}
+    - target: {fileID: 1028753912, guid: 50a86a77f8fe42c41871a20b18b21937, type: 3}
+      propertyPath: ground.m_Bits
+      value: 4096
+      objectReference: {fileID: 0}
     - target: {fileID: 1552215502, guid: 50a86a77f8fe42c41871a20b18b21937, type: 3}
       propertyPath: distance
       value: 1
