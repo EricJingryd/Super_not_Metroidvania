@@ -30,6 +30,10 @@ public class Skirmish_Enemy : MonoBehaviour
 
     void Update()
     {
+        if (player != null) // Finns pga att när spelar transformen försvinner, så kmr inte  
+        {
+
+        
         if(Vector2.Distance(transform.position,player.position) > stoppingDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
@@ -43,8 +47,9 @@ public class Skirmish_Enemy : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
         }
-       
-        if(timeBtwShots <= 0)
+        
+
+        if (timeBtwShots <= 0)
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
             timeBtwShots = startTimeBtwShots;
@@ -53,6 +58,9 @@ public class Skirmish_Enemy : MonoBehaviour
         {
             timeBtwShots -= Time.deltaTime;
         }
+        }
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
