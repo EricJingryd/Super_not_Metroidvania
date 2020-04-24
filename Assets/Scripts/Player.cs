@@ -261,9 +261,13 @@ public class Player : MonoBehaviour
 
         else if (collision.gameObject.tag == ("Health"))
         {
-            hitpoints += 1;
-            healthBar.SetHealth(hitpoints);
-            Destroy(collision.gameObject);
+            if (hitpoints < maxHitpoints)
+            {
+                hitpoints += 1;
+                healthBar.SetHealth(hitpoints);
+                Destroy(collision.gameObject);
+            }
+            
         }
     }
 }
