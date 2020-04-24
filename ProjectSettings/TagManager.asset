@@ -7,15 +7,18 @@ TagManager:
   - Enemy
   - Projectile
   - PlayerShot
+  - Destructable
+  - Bomb
+  - Health
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  -
+  - 
   - Water
   - UI
-  -
-  -
+  - 
+  - 
   - Ground
   - Climbing
   - Player
@@ -23,24 +26,23 @@ TagManager:
   - Jumpable
   - Minimap
   - HitEffect
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0

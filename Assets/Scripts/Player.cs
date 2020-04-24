@@ -26,8 +26,8 @@ public class Player : MonoBehaviour
 
 
     [Header("Player Hitpoints")]
-    [SerializeField] int hitpoints;
-    [SerializeField] int maxHitpoints = 3;
+     public int hitpoints;
+     public int maxHitpoints = 3;
 
 
     float fJumpPressedRemember = 0;
@@ -257,6 +257,13 @@ public class Player : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("PlayerDeath");
                 Destroy(gameObject);
             }
+        }
+
+        else if (collision.gameObject.tag == ("Health"))
+        {
+            hitpoints += 1;
+            healthBar.SetHealth(hitpoints);
+            Destroy(collision.gameObject);
         }
     }
 }
