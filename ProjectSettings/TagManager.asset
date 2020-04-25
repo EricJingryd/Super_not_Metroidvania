@@ -7,15 +7,17 @@ TagManager:
   - Enemy
   - Projectile
   - PlayerShot
+  - Destructable
+  - Bomb
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  -
+  - 
   - Water
   - UI
-  -
-  -
+  - 
+  - 
   - Ground
   - Climbing
   - Player
@@ -23,24 +25,23 @@ TagManager:
   - Jumpable
   - Minimap
   - HitEffect
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
+  - Walls and Roofs
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
@@ -59,6 +60,9 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1308404677
+    locked: 0
+  - name: Foreground decoration
+    uniqueID: 1294012977
     locked: 0
   - name: HitEfftect
     uniqueID: 1135166803
