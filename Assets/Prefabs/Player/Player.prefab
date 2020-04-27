@@ -237,6 +237,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
+  ground:
+    serializedVersion: 2
+    m_Bits: 4096
   runSpeed: 6
   jumpSpeed: 28
   climbSpeed: 5
@@ -247,6 +250,13 @@ MonoBehaviour:
   Shooting: 0
   hitpoints: 3
   maxHitpoints: 3
+  fJumpPressedRememberTime: 0.2
+  fGroundedRememberTime: 0.25
+  fCutJumpHeight: 0.5
+  fHorizontalAcceleration: 1
+  fHorizontalDampingBasic: 0.5
+  fHorizontalDampingWhenStopping: 0.5
+  fHorizontalDampingWhenTurning: 0.5
 --- !u!114 &1552215502
 MonoBehaviour:
   m_ObjectHideFlags: 0
