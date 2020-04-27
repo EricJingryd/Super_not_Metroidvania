@@ -409,6 +409,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1222382965612970530, guid: 8b219fa6ecf48fc448db6d7ca624bb06,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 987002085}
     - target: {fileID: 241858685795401650, guid: 8b219fa6ecf48fc448db6d7ca624bb06,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -500,6 +505,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ac3c234bb5807a41bc938418627d037, type: 3}
+--- !u!114 &987002085 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9021869622470068535, guid: 0ac3c234bb5807a41bc938418627d037,
+    type: 3}
+  m_PrefabInstance: {fileID: 987002084}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06dd253599918e4439f6326f544dbcf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1324908325
 PrefabInstance:
   m_ObjectHideFlags: 0

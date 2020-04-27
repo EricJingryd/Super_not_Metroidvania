@@ -357,8 +357,8 @@ MonoBehaviour:
   healthBar: {fileID: 9021869622470068535}
   speed: 2
   distance: 2
-  hitpoints: 1
-  maxHitpoints: 0
+  hitpoints: 2
+  maxHitpoints: 2
   movingRight: 1
   EnemyDeathEffect: {fileID: 5757581662434621914, guid: 1655aead05119c54f92140b5e7490c11,
     type: 3}
