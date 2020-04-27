@@ -1231,37 +1231,42 @@ PrefabInstance:
     - target: {fileID: 5782796438000227180, guid: ebaef05629fdbcc4ba35e795574967c1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.08
       objectReference: {fileID: 0}
     - target: {fileID: 5782796438000227180, guid: ebaef05629fdbcc4ba35e795574967c1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.44
       objectReference: {fileID: 0}
     - target: {fileID: 5782796438000227180, guid: ebaef05629fdbcc4ba35e795574967c1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 5782796438000227181, guid: ebaef05629fdbcc4ba35e795574967c1,
         type: 3}
       propertyPath: orthographic size
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5782796438000227181, guid: ebaef05629fdbcc4ba35e795574967c1,
         type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0.047169805
+      value: 0.08192953
       objectReference: {fileID: 0}
     - target: {fileID: 5782796438000227181, guid: ebaef05629fdbcc4ba35e795574967c1,
         type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0.043832317
+      value: 0.027767893
       objectReference: {fileID: 0}
     - target: {fileID: 5782796438000227181, guid: ebaef05629fdbcc4ba35e795574967c1,
         type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0.043832317
+      value: 0.1509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782796438000227181, guid: ebaef05629fdbcc4ba35e795574967c1,
+        type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5782796438476698083, guid: ebaef05629fdbcc4ba35e795574967c1,
         type: 3}
@@ -1273,11 +1278,36 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -3.44
       objectReference: {fileID: 0}
+    - target: {fileID: 5782796438476698083, guid: ebaef05629fdbcc4ba35e795574967c1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 5782796438476698082, guid: ebaef05629fdbcc4ba35e795574967c1,
         type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1540378369}
+    - target: {fileID: 5782796438476698082, guid: ebaef05629fdbcc4ba35e795574967c1,
+        type: 3}
+      propertyPath: m_LookAt
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782796438476698082, guid: ebaef05629fdbcc4ba35e795574967c1,
+        type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782796438476698081, guid: ebaef05629fdbcc4ba35e795574967c1,
+        type: 3}
+      propertyPath: m_Damping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782796438476698081, guid: ebaef05629fdbcc4ba35e795574967c1,
+        type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebaef05629fdbcc4ba35e795574967c1, type: 3}
 --- !u!1 &1354531206
@@ -1710,6 +1740,11 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1899361951}
+    - target: {fileID: 6463253056773444878, guid: 50a86a77f8fe42c41871a20b18b21937,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50a86a77f8fe42c41871a20b18b21937, type: 3}
 --- !u!4 &1540378369 stripped
