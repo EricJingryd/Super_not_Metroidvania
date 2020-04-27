@@ -18,6 +18,7 @@ public class Bomb : MonoBehaviour
                 if (objectsToDamage[i].gameObject.CompareTag("Destructable"))
                 {
                     Destroy(objectsToDamage[i].gameObject);
+                    FindObjectOfType<AudioManager>().Play("BombExplosionSound");
                 }
             }
         }
