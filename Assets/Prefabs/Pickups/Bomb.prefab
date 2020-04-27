@@ -97,10 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyEffect: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 3}
-  bombRadius: 10
-  whatIsDestructable:
-    serializedVersion: 2
-    m_Bits: 32768
+  bombRadius: 2
 --- !u!50 &658976947411452418
 Rigidbody2D:
   serializedVersion: 4
