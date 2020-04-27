@@ -9,11 +9,12 @@ public class Player_Controller : MonoBehaviour
     public Animator animator;
     public float runSpeed = 40;
 
-    float horizontalMovement = 0f;
+    private float horizontalMovement = 0f;
 
-    bool shooting = false;
-    bool jump = false;
-    bool crouch = false;
+    private bool jumpFlag = false;
+    private bool shooting = false;
+    private bool jump = false;
+    private bool crouch = false;
 
     void Update()
     {
@@ -22,10 +23,16 @@ public class Player_Controller : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMovement));
 
+        if (jumpFlag)
+        {
+            animator.SetBool("IsJumping", true);
+            jumpFlag = false;
+        }
+
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
-            animator.SetBool("IsJumping", true);
+            //animator.SetBool("IsJumping", true);
         }
         if (Input.GetButtonDown("Crouch"))
         {
@@ -57,6 +64,11 @@ public class Player_Controller : MonoBehaviour
     void FixedUpdate()
     {
         controller.Move(horizontalMovement * Time.fixedDeltaTime, crouch, jump);
-        jump = false;
+        //jump = false;
+        if (jump)
+        {
+            jumpFlag = true;
+            jump = false;
+        }
     }
 }
