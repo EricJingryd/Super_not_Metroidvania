@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2500077028895601079}
-  - component: {fileID: 2500077028895601076}
   - component: {fileID: 2500077028895601077}
   - component: {fileID: 2500077028895601098}
+  - component: {fileID: 874737086}
   m_Layer: 0
   m_Name: DoubleJump
   m_TagString: Untagged
@@ -34,19 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2500077028895601076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2500077028895601099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba0cef5d8ee0d354c89089f8544b0831, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerscript: {fileID: 0}
 --- !u!61 &2500077028895601077
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -122,6 +109,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &874737086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2500077028895601099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f8beeaa0bb2a284a92b9531ca977dfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3735317895160784931
 GameObject:
   m_ObjectHideFlags: 0

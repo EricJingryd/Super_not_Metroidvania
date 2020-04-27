@@ -60,6 +60,7 @@ public class Player : MonoBehaviour
     bool isAlive = true;
     bool playerHasHorizontalSpeed;
     public bool playerHasJumpBoots { get; set; }
+    public bool playerHasSpeedBuff { get; set; }
     bool playerCanDoubleJump = false;
 
     //Cached component references - Lagrad(e) data/referenser
@@ -106,6 +107,7 @@ public class Player : MonoBehaviour
                                                                               //detta inte skrivs i if-satsen nedan beror på bättre readability.
         myAnimator.SetBool("Running", playerHasHorizontalSpeed);    //Ändrar state till Running om spelaren springer, löpanimation startar
     }
+
 
     private void ClimbLadder()
     {

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1640868116}
   - component: {fileID: 1640868117}
-  m_Layer: 13
+  m_Layer: 10
   m_Name: MinimapIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,6 +184,8 @@ MonoBehaviour:
   hitpoints: 1
   maxHitpoints: 1
   startTimeBtwShots: 2
+  EnemyDeathEffect: {fileID: 5757581662434621914, guid: 1655aead05119c54f92140b5e7490c11,
+    type: 3}
   projectile: {fileID: 8296425182116176956, guid: f317c90506091084fa75d0606424fd5e,
     type: 3}
   player: {fileID: 0}
@@ -233,6 +235,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HealthBarCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474558230562322251, guid: 5e90e0d17117e514ab6b147a244c11c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3474558230562322254, guid: 5e90e0d17117e514ab6b147a244c11c2,
         type: 3}
@@ -349,6 +356,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.024999999
       objectReference: {fileID: 0}
+    - target: {fileID: 3474558229838827999, guid: 5e90e0d17117e514ab6b147a244c11c2,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474558229838827999, guid: 5e90e0d17117e514ab6b147a244c11c2,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3474558230697588457, guid: 5e90e0d17117e514ab6b147a244c11c2,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -359,15 +376,25 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 3474558229838827999, guid: 5e90e0d17117e514ab6b147a244c11c2,
+    - target: {fileID: 3474558230697588458, guid: 5e90e0d17117e514ab6b147a244c11c2,
         type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 3474558229838827999, guid: 5e90e0d17117e514ab6b147a244c11c2,
+    - target: {fileID: 3474558229692184352, guid: 5e90e0d17117e514ab6b147a244c11c2,
         type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474558229838827992, guid: 5e90e0d17117e514ab6b147a244c11c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474558230803119577, guid: 5e90e0d17117e514ab6b147a244c11c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e90e0d17117e514ab6b147a244c11c2, type: 3}
