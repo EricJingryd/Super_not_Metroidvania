@@ -157,7 +157,7 @@ public class Player : MonoBehaviour
 
         if ((fJumpPressedRemember > 0) && (fGroundedRemember > 0))
         {
-            Debug.Log(fGroundedRemember);
+            //Debug.Log(fGroundedRemember);
             fJumpPressedRemember = 0;
             fGroundedRemember = 0;
             myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpSpeed);
