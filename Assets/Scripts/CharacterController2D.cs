@@ -22,7 +22,10 @@ public class CharacterController2D : MonoBehaviour
 	[Header("Events")]
 	[Space]
 
-	public UnityEvent OnLandEvent;
+    [SerializeField] int hitpoints;
+    [SerializeField] int maxHitpoints = 3;
+
+    public UnityEvent OnLandEvent;
 
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
@@ -138,9 +141,19 @@ public class CharacterController2D : MonoBehaviour
 		// Switch the way the player is labelled as facing.
 		m_FacingRight = !m_FacingRight;
 
-		// Multiply the player's x local scale by -1.
-		Vector3 theScale = transform.localScale;
-		theScale.x *= -1;
-		transform.localScale = theScale;
+        transform.Rotate(0f, 180f, 0f);
 	}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy") || collision.CompareTag("Projectile"))
+        {
+            hitpoints -= 1;
+
+            if (hitpoints <= 0)
+            {
+                FindObjectOfType<AudioManager>().Play("PlayerDeath");
+                Destroy(gameObject);
+            }
+        }
+    }
 }

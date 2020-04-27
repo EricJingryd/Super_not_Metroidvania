@@ -11,11 +11,13 @@ public class Player_Controller : MonoBehaviour
 
     float horizontalMovement = 0f;
 
+    bool shooting = false;
     bool jump = false;
     bool crouch = false;
-    // Update is called once per frame
+
     void Update()
     {
+
         horizontalMovement = Input.GetAxisRaw("Horizontal") * runSpeed;
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMovement));
@@ -28,6 +30,16 @@ public class Player_Controller : MonoBehaviour
         if (Input.GetButtonDown("Crouch"))
         {
             crouch = true;
+        }
+        if (Input.GetButtonDown("Fire1"))
+        {
+            shooting = true;
+            animator.SetBool("IsShooting", true);
+        }
+        else if (Input.GetButtonUp("Fire1"))
+        {
+            shooting = false;
+            animator.SetBool("IsShooting", false);
         }
         else if (Input.GetButtonUp("Crouch"))
         {
