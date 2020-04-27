@@ -11,6 +11,7 @@ public class Skirmish_Enemy : MonoBehaviour
     public float retreatDistance;
     public int hitpoints;
     public int maxHitpoints = 1;
+    public int range;
 
     private float timeBtwShots;
     public float startTimeBtwShots;
@@ -33,7 +34,10 @@ public class Skirmish_Enemy : MonoBehaviour
         if (player != null) // Finns pga att när spelar transformen försvinner, så kmr inte  
         {
 
-        
+        if (Vector2.Distance(player.position,transform.position) <= range)
+        {
+
+            
         if(Vector2.Distance(transform.position,player.position) > stoppingDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
@@ -57,6 +61,7 @@ public class Skirmish_Enemy : MonoBehaviour
         else
         {
             timeBtwShots -= Time.deltaTime;
+        }
         }
         }
 
