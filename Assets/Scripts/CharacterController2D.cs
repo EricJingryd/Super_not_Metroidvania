@@ -19,7 +19,10 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 
-	[Header("Events")]
+    public bool playerHasDoubleJump = false;
+    bool playerCanDoubleJump = false;
+
+    [Header("Events")]
 	[Space]
 
     [SerializeField] int hitpoints;
@@ -33,7 +36,14 @@ public class CharacterController2D : MonoBehaviour
 	public BoolEvent OnCrouchEvent;
 	private bool m_wasCrouching = false;
 
-	private void Awake()
+    public HealthBar healthBar;
+
+    private void Start()
+    {
+        healthBar.SetMaxHealth(maxHitpoints);
+    }
+
+    private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
@@ -132,7 +142,18 @@ public class CharacterController2D : MonoBehaviour
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+            playerCanDoubleJump = true;
 		}
+        //DOUBLE JUMP
+        if(!m_Grounded && playerHasDoubleJump)
+        {
+            if(Input.GetButtonDown("Jump") && playerCanDoubleJump)
+            {
+                m_Rigidbody2D.velocity = Vector2.zero;
+                m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+                playerCanDoubleJump = false;
+            }
+        }
 	}
 
 
@@ -141,19 +162,34 @@ public class CharacterController2D : MonoBehaviour
 		// Switch the way the player is labelled as facing.
 		m_FacingRight = !m_FacingRight;
 
-        transform.Rotate(0f, 180f, 0f);
-	}
+        //transform.Rotate(0f, 180f, 0f);
+
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy") || collision.CompareTag("Projectile"))
         {
             hitpoints -= 1;
+            healthBar.SetHealth(hitpoints);
 
             if (hitpoints <= 0)
             {
                 FindObjectOfType<AudioManager>().Play("PlayerDeath");
                 Destroy(gameObject);
             }
+        }
+
+        if (collision.gameObject.tag == ("Health"))
+        {
+            if (hitpoints < maxHitpoints)
+            {
+                hitpoints += 1;
+                healthBar.SetHealth(hitpoints);
+                Destroy(collision.gameObject);
+            }
+
         }
     }
 }

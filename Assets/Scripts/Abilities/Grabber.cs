@@ -24,7 +24,7 @@ public class Grabber : MonoBehaviour
         {
             if (!grabbed)
             {
-                hit = Physics2D.Raycast(transform.position, Vector2.right * transform.localScale.x, distance); //Uses raycast in front of player to check for collision
+                hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y-0.5f), Vector2.right * transform.localScale.x, distance); //Uses raycast in front of player to check for collision
 
                 if (hit.collider != null && hit.collider.gameObject.CompareTag("Bomb"))
                 {
@@ -61,6 +61,6 @@ public class Grabber : MonoBehaviour
     {
         Gizmos.color = Color.green;
 
-        Gizmos.DrawLine(transform.position, transform.position + Vector3.right * transform.localScale.x*distance);
+        Gizmos.DrawLine(new Vector2(transform.position.x, transform.position.y-0.5f), new Vector3(transform.position.x, transform.position.y - 0.5f) + Vector3.right * transform.localScale.x*distance);
     }
 }

@@ -795,7 +795,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1308404677
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -3500,7 +3500,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1308404677
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -5764,16 +5764,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: -4
       objectReference: {fileID: 0}
-    - target: {fileID: 1529271723765280556, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 0.087400496
-      objectReference: {fileID: 0}
-    - target: {fileID: 1529271723765280556, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.0037899688
-      objectReference: {fileID: 0}
     - target: {fileID: 3950840663080311998, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
         type: 3}
       propertyPath: scene
@@ -5784,6 +5774,11 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 604028699}
+    - target: {fileID: 8723365029157269372, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
+        type: 3}
+      propertyPath: scene
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 684399506128099587, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -5794,15 +5789,40 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1529271723765280556, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.087400496
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529271723765280556, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.0037899613
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529271723765280556, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.02276653
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529271723765280556, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.43446696
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385885419993253496, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.22280777
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385885419993253496, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.03438449
+      objectReference: {fileID: 0}
     - target: {fileID: 6344300095228426464, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
         type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8723365029157269372, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
-        type: 3}
-      propertyPath: scene
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d515d7a3b5967d4aa34ed93f6819b69, type: 3}
@@ -6262,7 +6282,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 934784171
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -6428,20 +6448,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1529271723765280556, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.08197206
-      objectReference: {fileID: 0}
-    - target: {fileID: 1529271723765280556, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.3160559
-      objectReference: {fileID: 0}
     - target: {fileID: 3950840663080311998, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
         type: 3}
       propertyPath: scene
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723365029157269372, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
+        type: 3}
+      propertyPath: scene
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 684399506128099587, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
         type: 3}
@@ -6453,10 +6468,15 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 8723365029157269372, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
+    - target: {fileID: 1529271723765280556, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
         type: 3}
-      propertyPath: scene
-      value: 2
+      propertyPath: m_Offset.y
+      value: -0.08197206
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529271723765280556, guid: 2d515d7a3b5967d4aa34ed93f6819b69,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.3160559
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d515d7a3b5967d4aa34ed93f6819b69, type: 3}

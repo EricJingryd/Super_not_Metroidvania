@@ -8,7 +8,7 @@ public class GetDoubleJump : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            FindObjectOfType<Player>().playerHasJumpBoots = true;
+            FindObjectOfType<CharacterController2D>().playerHasDoubleJump = true;
             Destroy(gameObject);
             FindObjectOfType<AudioManager>().Play("Upgrade");
         }

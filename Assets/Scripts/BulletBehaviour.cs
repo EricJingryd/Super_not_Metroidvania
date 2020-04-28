@@ -8,10 +8,13 @@ public class BulletBehaviour : MonoBehaviour
     public Rigidbody2D bulletRB;
     public GameObject HitEffect;
     float bulletLifeTime = 1f;
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        bulletRB.velocity = transform.right * speed;
+        player = GameObject.FindGameObjectWithTag("Player");
+        //bulletRB.velocity = transform.right * speed;
+        bulletRB.velocity = Vector2.right * player.transform.localScale.x * speed;
     }
 
     void Update()
