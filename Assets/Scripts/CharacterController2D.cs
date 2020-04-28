@@ -19,8 +19,10 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 
+    //ABILITIES
     public bool playerHasDoubleJump = false;
     bool playerCanDoubleJump = false;
+    public bool playerHasSpeedBuff = false;
 
     [Header("Events")]
 	[Space]
@@ -105,7 +107,9 @@ public class CharacterController2D : MonoBehaviour
 				// Disable one of the colliders when crouching
 				if (m_CrouchDisableCollider != null)
 					m_CrouchDisableCollider.enabled = false;
-			} else
+			}
+
+            else
 			{
 				// Enable the collider when not crouching
 				if (m_CrouchDisableCollider != null)
@@ -155,7 +159,6 @@ public class CharacterController2D : MonoBehaviour
             }
         }
 	}
-
 
 	private void Flip()
 	{

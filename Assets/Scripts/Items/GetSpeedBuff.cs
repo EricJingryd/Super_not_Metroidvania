@@ -8,7 +8,7 @@ public class GetSpeedBuff : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-
+            FindObjectOfType<CharacterController2D>().playerHasSpeedBuff = true;
             Destroy(gameObject);
             FindObjectOfType<AudioManager>().Play("Upgrade");
         }
