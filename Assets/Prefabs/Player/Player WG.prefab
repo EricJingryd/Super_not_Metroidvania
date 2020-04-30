@@ -208,6 +208,7 @@ MonoBehaviour:
   m_CeilingCheck: {fileID: 2430118340171852264}
   m_CrouchDisableCollider: {fileID: 2430118339166697883}
   playerHasDoubleJump: 0
+  playerHasSpeedBuff: 0
   hitpoints: 3
   maxHitpoints: 3
   OnLandEvent:
@@ -292,6 +293,9 @@ MonoBehaviour:
   bulletStart: {fileID: 2430118339145567725}
   bulletPrefab: {fileID: 1799891586903526081, guid: 997d320db6902f145b7d0fe6c01f324b,
     type: 3}
+  tripleBeamPrefab: {fileID: 1799891586903526081, guid: b80a967f58ebc1e4a88a043fa7f4bb34,
+    type: 3}
+  playerHasTripleBeam: 0
 --- !u!114 &2430118339166697886
 MonoBehaviour:
   m_ObjectHideFlags: 0

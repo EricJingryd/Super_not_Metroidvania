@@ -7,9 +7,9 @@ public class BulletBehaviour : MonoBehaviour
     public float speed = 20f;
     public Rigidbody2D bulletRB;
     public GameObject HitEffect;
-    float bulletLifeTime = 1f;
+    [SerializeField]float bulletLifeTime = 1f;
     GameObject player;
-    // Start is called before the first frame update
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -25,6 +25,7 @@ public class BulletBehaviour : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))

@@ -16,7 +16,7 @@ public class Player_Controller : MonoBehaviour
     private bool jump = false;
     private bool crouch = false;
     float buffTimer;
-    bool buffedSpeed = false;
+    bool speedIsBuffed = false;
     float buffCooldown;
     bool canBuffSpeed = true;
 
@@ -38,18 +38,18 @@ public class Player_Controller : MonoBehaviour
             jump = true;
             //animator.SetBool("IsJumping", true);
         }
-        if(controller.playerHasSpeedBuff && Input.GetKeyDown(KeyCode.R) && !buffedSpeed && canBuffSpeed)
+        if(controller.playerHasSpeedBuff && Input.GetKeyDown(KeyCode.R) && !speedIsBuffed && canBuffSpeed)
         {
             runSpeed *= 2;
-            buffedSpeed = true;
+            speedIsBuffed = true;
         }
-        if (buffedSpeed)
+        if (speedIsBuffed)
         {
             buffTimer += Time.deltaTime;
             if(buffTimer >= 5)
             {
                 runSpeed = 40f;
-                buffedSpeed = false;
+                speedIsBuffed = false;
                 buffTimer = 0;
                 canBuffSpeed = false;
             }
