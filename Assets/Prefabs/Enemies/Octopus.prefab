@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1640868116}
   - component: {fileID: 1640868117}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: MinimapIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -357,6 +357,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.024999999
       objectReference: {fileID: 0}
+    - target: {fileID: 3474558230697588458, guid: 5e90e0d17117e514ab6b147a244c11c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3474558230697588457, guid: 5e90e0d17117e514ab6b147a244c11c2,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -366,11 +371,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3474558230697588458, guid: 5e90e0d17117e514ab6b147a244c11c2,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3474558229838827999, guid: 5e90e0d17117e514ab6b147a244c11c2,
         type: 3}
