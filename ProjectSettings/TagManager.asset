@@ -14,35 +14,35 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  -
+  - 
   - Water
   - UI
-  -
-  -
+  - 
+  - 
   - Ground
-  - Climbing
+  - BackgroundStyle
   - Player
   - Background
   - Jumpable
   - Minimap
   - HitEffect
   - Walls and Roofs
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
@@ -50,7 +50,7 @@ TagManager:
   - name: Background
     uniqueID: 3809797697
     locked: 0
-  - name: Climbing
+  - name: BackgroundStyle
     uniqueID: 934784171
     locked: 0
   - name: Enemies
