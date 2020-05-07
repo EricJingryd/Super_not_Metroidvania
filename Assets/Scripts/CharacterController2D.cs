@@ -42,7 +42,7 @@ public class CharacterController2D : MonoBehaviour
 
     private void Start()
     {
-        healthBar.SetMaxHealth(maxHitpoints);
+        //healthBar.SetMaxHealth(maxHitpoints);
     }
 
     private void Awake()
