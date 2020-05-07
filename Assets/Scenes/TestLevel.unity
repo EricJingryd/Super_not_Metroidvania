@@ -44391,5 +44391,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7201276806432634839, guid: 196ceef2ccb44c14492dda74afa0b8d6,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.93793106
+      objectReference: {fileID: 0}
+    - target: {fileID: 7201276806432634839, guid: 196ceef2ccb44c14492dda74afa0b8d6,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.04757309
+      objectReference: {fileID: 0}
+    - target: {fileID: 7201276806432634832, guid: 196ceef2ccb44c14492dda74afa0b8d6,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 999625817}
+    - target: {fileID: 7201276806432634795, guid: 196ceef2ccb44c14492dda74afa0b8d6,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 7201276806432634795, guid: 196ceef2ccb44c14492dda74afa0b8d6,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.30819827
+      objectReference: {fileID: 0}
+    - target: {fileID: 7201276806432634795, guid: 196ceef2ccb44c14492dda74afa0b8d6,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.187169
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 196ceef2ccb44c14492dda74afa0b8d6, type: 3}

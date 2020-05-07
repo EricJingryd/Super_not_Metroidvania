@@ -38,13 +38,13 @@ public class Jumping_Enemy : MonoBehaviour
         yield return new WaitForSeconds(.5f);
         StartCoroutine(Jump());
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("PlayerShot"))
         {
             hitpoints -= 1;
             healthBar.SetHealth(hitpoints);
-
             if (hitpoints <= 0)
             {
                 Destroy(gameObject);
