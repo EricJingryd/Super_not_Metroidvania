@@ -9,15 +9,16 @@ public class Bomb : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Destructable"))
+        if (other.CompareTag("Destructable") || other.CompareTag("Enemy"))
         {
             Instantiate(destroyEffect, transform.position, Quaternion.identity);
             Collider2D[] objectsToDamage = Physics2D.OverlapCircleAll(transform.position, bombRadius);
             for (int i = 0; i < objectsToDamage.Length; i++)
             {
-                if (objectsToDamage[i].gameObject.CompareTag("Destructable"))
+                if (objectsToDamage[i].gameObject.CompareTag("Destructable") || objectsToDamage[i].gameObject.CompareTag("Enemy"))
                 {
                     Destroy(objectsToDamage[i].gameObject);
+                    Destroy(gameObject);
                     FindObjectOfType<AudioManager>().Play("BombExplosionSound");
                 }
             }
