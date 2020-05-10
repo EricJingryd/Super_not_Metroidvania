@@ -42510,6 +42510,21 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1028280402}
+    - target: {fileID: 2430118339166697882, guid: 0c9cc1b8c9b05414ea8830105840ac3c,
+        type: 3}
+      propertyPath: checkRadius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430118339166697882, guid: 0c9cc1b8c9b05414ea8830105840ac3c,
+        type: 3}
+      propertyPath: playerHasDoubleJump
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430118339166697882, guid: 0c9cc1b8c9b05414ea8830105840ac3c,
+        type: 3}
+      propertyPath: playerHasSpeedBuff
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c9cc1b8c9b05414ea8830105840ac3c, type: 3}
 --- !u!1001 &1543734231

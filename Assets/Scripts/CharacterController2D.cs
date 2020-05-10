@@ -146,21 +146,25 @@ public class CharacterController2D : MonoBehaviour
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+            FindObjectOfType<AudioManager>().Play("PlayerJump");
             playerCanDoubleJump = true;
 		}
-        //DOUBLE JUMP
-        if(!m_Grounded && playerHasDoubleJump)
+	}
+    public void Update()
+    {
+        if (m_Grounded == false && playerHasDoubleJump)
         {
-            if(Input.GetButtonDown("Jump") && playerCanDoubleJump)
+            if (Input.GetButtonDown("Jump") && playerCanDoubleJump)
             {
                 m_Rigidbody2D.velocity = Vector2.zero;
                 m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+                FindObjectOfType<AudioManager>().Play("PlayerJump");
                 playerCanDoubleJump = false;
             }
         }
-	}
+    }
 
-	private void Flip()
+    private void Flip()
 	{
 		// Switch the way the player is labelled as facing.
 		m_FacingRight = !m_FacingRight;

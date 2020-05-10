@@ -10886,7 +10886,7 @@ MonoBehaviour:
   sounds:
   - name: PlayerJump
     clip: {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
-    volume: 0.1
+    volume: 0.05
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
@@ -120068,11 +120068,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -134.27
       objectReference: {fileID: 0}
-    - target: {fileID: 3709436261552890715, guid: 0c9cc1b8c9b05414ea8830105840ac3c,
-        type: 3}
-      propertyPath: m_Name
-      value: Player WG
-      objectReference: {fileID: 0}
     - target: {fileID: 3709436261552890710, guid: 0c9cc1b8c9b05414ea8830105840ac3c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -120128,6 +120123,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3709436261552890715, guid: 0c9cc1b8c9b05414ea8830105840ac3c,
+        type: 3}
+      propertyPath: m_Name
+      value: Player WG
+      objectReference: {fileID: 0}
     - target: {fileID: 3709436261634270209, guid: 0c9cc1b8c9b05414ea8830105840ac3c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -120137,6 +120137,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.246
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430118339166697882, guid: 0c9cc1b8c9b05414ea8830105840ac3c,
+        type: 3}
+      propertyPath: playerHasDoubleJump
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430118339166697882, guid: 0c9cc1b8c9b05414ea8830105840ac3c,
+        type: 3}
+      propertyPath: playerHasSpeedBuff
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c9cc1b8c9b05414ea8830105840ac3c, type: 3}
@@ -125001,22 +125011,22 @@ PrefabInstance:
     - target: {fileID: 5782796438000227180, guid: ebaef05629fdbcc4ba35e795574967c1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -134.27
       objectReference: {fileID: 0}
     - target: {fileID: 5782796438000227180, guid: ebaef05629fdbcc4ba35e795574967c1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -34.78
       objectReference: {fileID: 0}
     - target: {fileID: 5782796438000227180, guid: ebaef05629fdbcc4ba35e795574967c1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 5782796438000227181, guid: ebaef05629fdbcc4ba35e795574967c1,
         type: 3}
       propertyPath: orthographic size
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5782796438476698083, guid: ebaef05629fdbcc4ba35e795574967c1,
         type: 3}
