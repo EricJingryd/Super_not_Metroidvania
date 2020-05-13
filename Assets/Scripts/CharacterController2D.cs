@@ -184,6 +184,7 @@ public class CharacterController2D : MonoBehaviour
             if (hitpoints <= 0)
             {
                 FindObjectOfType<AudioManager>().Play("PlayerDeath");
+                FindObjectOfType<AudioManager>().Play("GameOver");
                 Destroy(gameObject);
             }
         }
