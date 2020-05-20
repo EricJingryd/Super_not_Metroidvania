@@ -21,14 +21,6 @@ public class Manager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        if (gameStart)
-        {
-            FindObjectOfType<AudioManager>().Play("BGM");
-        }
-    }
-
     public void UnloadScene(int scene)
     {
         StartCoroutine(Unload(scene));
