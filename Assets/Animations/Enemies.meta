@@ -1,6 +1,20 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: ef9f094ac431f8145b0257ee555478a2
 folderAsset: yes
+=======
+<<<<<<<< HEAD:Assets/Warped Caves/Artwork/Environment/Materials.meta
+guid: 013f3e282cd742c43944a8b79e6507ce
+folderAsset: yes
+========
+<<<<<<< HEAD:Assets/Animations/Enemies.meta
+guid: ef9f094ac431f8145b0257ee555478a2
+folderAsset: yes
+=======
+guid: 57c6f3755a143d94cb2b69b4af27cbfb
+>>>>>>> Muhamed_Branch:Assets/Scenes/Main Game 2.unity.meta
+>>>>>>>> Edmonds-Branch:Assets/Animations/Enemies.meta
+>>>>>>> Edmonds-Branch
 DefaultImporter:
   externalObjects: {}
   userData: 
