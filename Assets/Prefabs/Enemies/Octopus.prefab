@@ -181,8 +181,8 @@ MonoBehaviour:
   speed: 3
   stoppingDistance: 5
   retreatDistance: 10
-  hitpoints: 1
-  maxHitpoints: 1
+  hitpoints: 0
+  maxHitpoints: 5
   range: 10
   startTimeBtwShots: 2
   EnemyDeathEffect: {fileID: 5757581662434621914, guid: 1655aead05119c54f92140b5e7490c11,
@@ -357,11 +357,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.024999999
       objectReference: {fileID: 0}
-    - target: {fileID: 3474558230697588458, guid: 5e90e0d17117e514ab6b147a244c11c2,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 3474558230697588457, guid: 5e90e0d17117e514ab6b147a244c11c2,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -371,6 +366,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474558230697588458, guid: 5e90e0d17117e514ab6b147a244c11c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3474558229838827999, guid: 5e90e0d17117e514ab6b147a244c11c2,
         type: 3}

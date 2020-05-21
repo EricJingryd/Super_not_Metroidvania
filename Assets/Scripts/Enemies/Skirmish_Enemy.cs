@@ -6,6 +6,8 @@ public class Skirmish_Enemy : MonoBehaviour
 {
     public HealthBar healthBar;
 
+    public bool isBoss;
+
     public float speed;
     public float stoppingDistance;
     public float retreatDistance;
@@ -64,6 +66,12 @@ public class Skirmish_Enemy : MonoBehaviour
         }
 
 
+        if (isBoss && hitpoints < maxHitpoints / 2)
+        {
+            Enrage();
+            isBoss = false;
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -80,5 +88,13 @@ public class Skirmish_Enemy : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("EnemyExplosionSound");
             }
         }
+    }
+
+    private void Enrage()
+    {
+        speed = speed * 2;
+        range = range * 2;
+        retreatDistance -= retreatDistance * 2;
+        startTimeBtwShots -= startTimeBtwShots / 2;
     }
 }
