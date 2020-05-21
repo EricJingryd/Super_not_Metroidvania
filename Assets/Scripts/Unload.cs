@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Unload : MonoBehaviour
 {
-    public int scene;
+    [SerializeField] int scene;
 
     bool unloaded;
 
