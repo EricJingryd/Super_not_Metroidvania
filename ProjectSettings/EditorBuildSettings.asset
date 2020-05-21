@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/New art Sandbox.unity
     guid: 10a62c01050e7ca47b3efac6020db3d2
   - enabled: 0
-    path: Assets/Scenes/TestLevel.unity
+    path: Assets/Scenes/Sandbox.unity
     guid: c0bc7dd2fa861464dac9b25db92c2516
   - enabled: 1
     path: Assets/Scenes/NeverUnload.unity
@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main level 3.unity
     guid: baa286cb5ece7c24e8f102fd2133de74
+  - enabled: 1
+    path: Assets/Scenes/Main Game 2.unity
+    guid: 57c6f3755a143d94cb2b69b4af27cbfb
   m_configObjects: {}
