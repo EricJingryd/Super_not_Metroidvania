@@ -7,35 +7,42 @@ public class Jumping_Enemy : MonoBehaviour
     private Rigidbody2D jumpingEnemy;
 
     public float speed;
-    public float jumpForce = 300f;
-    public float jumpRangeOne = 1750;
-    public float jumpRangeTwo = 2500;
+    public float jumpForce;
+    private float dir;
 
     public int hitpoints;
     public int maxHitpoints;
 
     public GameObject EnemyDeathEffect;
-    public HealthBar healthBar;
+    Transform player;
+    //public HealthBar healthBar;
     // Start is called before the first frame update
 
     void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         jumpingEnemy = GetComponent<Rigidbody2D>();
     }
     void Start()
     {
         StartCoroutine (Jump ());
         hitpoints = maxHitpoints;
-        healthBar.SetMaxHealth(maxHitpoints);
+        //healthBar.SetMaxHealth(maxHitpoints);
+    }
+    private void Update()
+    {
     }
 
     // Update is called once per frame
     IEnumerator Jump()
     {
-        yield return new WaitForSeconds(Random.Range(1, 2));
-        jumpForce = Random.Range(jumpRangeOne, jumpRangeTwo);
-        jumpingEnemy.AddForce(new Vector2(0f, jumpForce));
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(2);
+        if (transform.position.x - player.position.x < 0)
+            dir = 1;
+        if (transform.position.x - player.position.x > 0)
+            dir = -1;
+        jumpingEnemy.AddForce(new Vector2(10*dir, jumpForce),ForceMode2D.Impulse);
+        
         StartCoroutine(Jump());
     }
 
@@ -44,7 +51,7 @@ public class Jumping_Enemy : MonoBehaviour
         if (collision.CompareTag("PlayerShot"))
         {
             hitpoints -= 1;
-            healthBar.SetHealth(hitpoints);
+            //healthBar.SetHealth(hitpoints);
             if (hitpoints <= 0)
             {
                 Destroy(gameObject);
