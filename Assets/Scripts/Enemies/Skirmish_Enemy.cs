@@ -76,6 +76,18 @@ public class Skirmish_Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Bomb"))
+        {
+            hitpoints -= 5;
+            healthBar.SetHealth(hitpoints);
+            if (hitpoints <= 0)
+            {
+                Destroy(gameObject);
+                Instantiate(EnemyDeathEffect, transform.position, transform.rotation);
+                FindObjectOfType<AudioManager>().Play("JumperDeath");
+                FindObjectOfType<AudioManager>().Play("EnemyExplosionSound");
+            }
+        }
         if (collision.CompareTag("PlayerShot"))
         {
             hitpoints -= 1;

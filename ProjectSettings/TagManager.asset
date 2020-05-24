@@ -10,6 +10,7 @@ TagManager:
   - Destructable
   - Bomb
   - Health
+  - EnemyBoss
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,8 @@ using UnityEngine;
 public class Bomb : MonoBehaviour
 {
     public GameObject destroyEffect;
+    public Transform bomb;
+    public Transform holdpoint;
     public float bombRadius;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -21,7 +23,13 @@ public class Bomb : MonoBehaviour
                     Destroy(gameObject);
                     FindObjectOfType<AudioManager>().Play("BombExplosionSound");
                 }
+
             }
+        }
+        else if (other.CompareTag("EnemyBoss"))
+        {
+            Destroy(gameObject);
+            FindObjectOfType<AudioManager>().Play("BombExplosionSound");
         }
     }
 

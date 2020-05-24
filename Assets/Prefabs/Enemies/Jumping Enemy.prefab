@@ -105,7 +105,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 5
+  m_Constraints: 4
 --- !u!61 &7201276806432634839
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -145,14 +145,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  jumpForce: 300
-  jumpRangeOne: 1750
-  jumpRangeTwo: 2500
+  jumpForce: 50
   hitpoints: 5
   maxHitpoints: 5
   EnemyDeathEffect: {fileID: 5757581662434621914, guid: 1655aead05119c54f92140b5e7490c11,
     type: 3}
-  healthBar: {fileID: 0}
 --- !u!61 &7201276806432634795
 BoxCollider2D:
   m_ObjectHideFlags: 0
