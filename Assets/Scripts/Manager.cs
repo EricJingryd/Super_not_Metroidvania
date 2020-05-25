@@ -15,7 +15,7 @@ public class Manager : MonoBehaviour
         {
             anyManager = this;
 
-            SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
 
             gameStart = true;
         }
