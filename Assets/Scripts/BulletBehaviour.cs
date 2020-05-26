@@ -7,7 +7,7 @@ public class BulletBehaviour : MonoBehaviour
     public float speed = 20f;
     public Rigidbody2D bulletRB;
     public GameObject HitEffect;
-    [SerializeField]float bulletLifeTime = 1f;
+    [SerializeField] float bulletLifeTime = 1f;
     GameObject player;
 
     void Start()
@@ -28,7 +28,7 @@ public class BulletBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy") || collision.CompareTag("EnemyBoss"))
         {
             Instantiate(HitEffect, transform.position, transform.rotation);
             FindObjectOfType<AudioManager>().Play("PlayerOnTriggerEnemy");

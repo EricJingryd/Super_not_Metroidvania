@@ -504,11 +504,11 @@ MonoBehaviour:
   healthBar: {fileID: 8422597504039675337}
   isBoss: 1
   speed: 5
-  stoppingDistance: 1
-  retreatDistance: 10
+  stoppingDistance: 6
+  retreatDistance: 9
   hitpoints: 0
-  maxHitpoints: 30
-  range: 10
+  maxHitpoints: 40
+  range: 20
   startTimeBtwShots: 2
   EnemyDeathEffect: {fileID: 5757581662434621914, guid: 1655aead05119c54f92140b5e7490c11,
     type: 3}

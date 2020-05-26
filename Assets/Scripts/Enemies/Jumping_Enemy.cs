@@ -15,7 +15,7 @@ public class Jumping_Enemy : MonoBehaviour
 
     public GameObject EnemyDeathEffect;
     Transform player;
-    //public HealthBar healthBar;
+    public HealthBar healthBar;
     // Start is called before the first frame update
 
     void Awake()
@@ -27,7 +27,7 @@ public class Jumping_Enemy : MonoBehaviour
     {
         StartCoroutine (Jump ());
         hitpoints = maxHitpoints;
-        //healthBar.SetMaxHealth(maxHitpoints);
+        healthBar.SetMaxHealth(maxHitpoints);
     }
     private void Update()
     {
@@ -51,7 +51,7 @@ public class Jumping_Enemy : MonoBehaviour
         if (collision.CompareTag("PlayerShot"))
         {
             hitpoints -= 1;
-            //healthBar.SetHealth(hitpoints);
+            healthBar.SetHealth(hitpoints);
             if (hitpoints <= 0)
             {
                 Destroy(gameObject);

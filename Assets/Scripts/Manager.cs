@@ -7,10 +7,13 @@ public class Manager : MonoBehaviour
 {
     public static Manager anyManager;
 
+    Bomb bomb;
+
     bool gameStart;
 
     private void Awake()
     {
+        
         if (!gameStart)
         {
             anyManager = this;
@@ -19,6 +22,7 @@ public class Manager : MonoBehaviour
 
             gameStart = true;
         }
+
     }
 
     private void Start()
@@ -41,4 +45,5 @@ public class Manager : MonoBehaviour
 
         SceneManager.UnloadSceneAsync(scene);
     }
+
 }

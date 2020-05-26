@@ -66,7 +66,7 @@ public class Skirmish_Enemy : MonoBehaviour
         }
 
 
-        if (isBoss && hitpoints < maxHitpoints / 2)
+        if (isBoss && hitpoints < maxHitpoints *0.6)
         {
             Enrage();
             isBoss = false;
@@ -108,5 +108,6 @@ public class Skirmish_Enemy : MonoBehaviour
         range = range * 2;
         retreatDistance -= retreatDistance * 2;
         startTimeBtwShots -= startTimeBtwShots / 2;
+        stoppingDistance = 1;
     }
 }
