@@ -132,6 +132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jumping Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7201276806432634833, guid: 196ceef2ccb44c14492dda74afa0b8d6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7201276806432634836, guid: 196ceef2ccb44c14492dda74afa0b8d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -190,12 +195,12 @@ PrefabInstance:
     - target: {fileID: 3577540891540817429, guid: 196ceef2ccb44c14492dda74afa0b8d6,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3577540891540817429, guid: 196ceef2ccb44c14492dda74afa0b8d6,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 196ceef2ccb44c14492dda74afa0b8d6, type: 3}
@@ -248,6 +253,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy Patroler (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510034749152847347, guid: 0ac3c234bb5807a41bc938418627d037,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4510034749152847311, guid: 0ac3c234bb5807a41bc938418627d037,
         type: 3}
@@ -1044,7 +1054,7 @@ PrefabInstance:
     - target: {fileID: 1222382965612970529, guid: 8b219fa6ecf48fc448db6d7ca624bb06,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1222382965612970531, guid: 8b219fa6ecf48fc448db6d7ca624bb06,
         type: 3}
@@ -1158,12 +1168,12 @@ PrefabInstance:
     - target: {fileID: 241858685795401650, guid: 8b219fa6ecf48fc448db6d7ca624bb06,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 241858685795401650, guid: 8b219fa6ecf48fc448db6d7ca624bb06,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b219fa6ecf48fc448db6d7ca624bb06, type: 3}
@@ -5290,6 +5300,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy Patroler (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510034749152847347, guid: 0ac3c234bb5807a41bc938418627d037,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4510034749152847311, guid: 0ac3c234bb5807a41bc938418627d037,
         type: 3}
@@ -42512,6 +42527,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy Patroler (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510034749152847347, guid: 0ac3c234bb5807a41bc938418627d037,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4510034749152847311, guid: 0ac3c234bb5807a41bc938418627d037,
         type: 3}
