@@ -16,20 +16,35 @@ EditorBuildSettings:
     guid: 040c1e8e24277f04bbb7dceffc5b837a
   - enabled: 1
     path: Assets/Scenes/Main level 2.unity
-    guid: 406ef8163b6513049955cb5d338dd200
-  - enabled: 1
-    path: Assets/Scenes/Main level 4.unity
-    guid: 36315433dbc63914c80c5594b74c402e
+    guid: e8f5f767aaf5c474ca3f925bd998c072
   - enabled: 1
     path: Assets/Scenes/Main level 3.unity
     guid: baa286cb5ece7c24e8f102fd2133de74
   - enabled: 1
+    path: Assets/Scenes/Main level 4.unity
+    guid: 57c6f3755a143d94cb2b69b4af27cbfb
+  - enabled: 1
     path: Assets/Scenes/Main level 5.unity
-    guid: f6940b1949306c94ba6ec2602b55d1a0
+    guid: d17cb1e2680ac1644b45f8f63e73fee2
   - enabled: 1
     path: Assets/Scenes/Main level 6.unity
-    guid: da3b7cef885400b4785bb18912eb72b9
+    guid: 80010a7948218be4795c6eb137c2431e
   - enabled: 1
     path: Assets/Scenes/Boss Level.unity
-    guid: 3647493a0d649c54db082e07e8ceef89
+    guid: ae992583750e3ac489c5e94afa223328
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
