@@ -312,6 +312,7 @@ MonoBehaviour:
   distance: 0.3
   throwforce: 7
   Holdpoint: {fileID: 2430118340514399497}
+  bomb: {fileID: 658976947411452421, guid: 289e36e9ac0f708498ec6a443eda0132, type: 3}
 --- !u!1 &2430118340053242950
 GameObject:
   m_ObjectHideFlags: 0

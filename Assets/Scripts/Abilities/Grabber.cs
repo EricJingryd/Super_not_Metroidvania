@@ -10,6 +10,10 @@ public class Grabber : MonoBehaviour
     public float distance = 2f;
     public float throwforce;
     public Transform Holdpoint;
+    public Transform bomb;
+    private double bombCooldown;
+    private bool canUseBomb = true;
+    public bool hasBomb = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +24,29 @@ public class Grabber : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (!canUseBomb)
+        {
+            bombCooldown += Time.deltaTime;
+            if (bombCooldown >= 5)
+            {
+                canUseBomb = true;
+            }
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            if (Input.GetKeyDown(KeyCode.I) && canUseBomb && hasBomb)
+            {
+                GameObject bombOld = GameObject.FindGameObjectWithTag("Bomb");
+                if (bombOld != null) 
+                    Destroy(bombOld);
+                Instantiate(bomb, Holdpoint.position, Quaternion.identity);
+                canUseBomb = false;
+                bombCooldown = 0;
+            }
+        }
+        
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (!grabbed)

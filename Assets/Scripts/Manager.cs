@@ -7,18 +7,22 @@ public class Manager : MonoBehaviour
 {
     public static Manager anyManager;
 
+    Bomb bomb;
+
     bool gameStart;
 
     private void Awake()
     {
+        
         if (!gameStart)
         {
             anyManager = this;
 
-            SceneManager.LoadSceneAsync(9, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
 
             gameStart = true;
         }
+
     }
 
     private void Start()
@@ -41,4 +45,5 @@ public class Manager : MonoBehaviour
 
         SceneManager.UnloadSceneAsync(scene);
     }
+
 }

@@ -66,7 +66,7 @@ public class Skirmish_Enemy : MonoBehaviour
         }
 
 
-        if (isBoss && hitpoints < maxHitpoints / 2)
+        if (isBoss && hitpoints < maxHitpoints *0.6)
         {
             Enrage();
             isBoss = false;
@@ -76,6 +76,18 @@ public class Skirmish_Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Bomb"))
+        {
+            hitpoints -= 5;
+            healthBar.SetHealth(hitpoints);
+            if (hitpoints <= 0)
+            {
+                Destroy(gameObject);
+                Instantiate(EnemyDeathEffect, transform.position, transform.rotation);
+                FindObjectOfType<AudioManager>().Play("JumperDeath");
+                FindObjectOfType<AudioManager>().Play("EnemyExplosionSound");
+            }
+        }
         if (collision.CompareTag("PlayerShot"))
         {
             hitpoints -= 1;
@@ -96,5 +108,6 @@ public class Skirmish_Enemy : MonoBehaviour
         range = range * 2;
         retreatDistance -= retreatDistance * 2;
         startTimeBtwShots -= startTimeBtwShots / 2;
+        stoppingDistance = 1;
     }
 }
